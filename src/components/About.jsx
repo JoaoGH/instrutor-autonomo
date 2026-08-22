@@ -1,6 +1,7 @@
 import React from 'react';
 import { SITE_CONTENT } from '../data/content';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import heroImg from '../assets/images/hero.webp';
 
 export default function About() {
   const { about } = SITE_CONTENT;
@@ -17,32 +18,36 @@ export default function About() {
             <div className="relative w-full max-w-md">
               
               {/* Moldura Visual */}
-              <div className="aspect-[4/5] rounded-3xl bg-gradient-to-tr from-brand-800 via-navy-900 to-navy-950 p-6 flex flex-col justify-between text-white shadow-2xl relative overflow-hidden">
-                <div className="absolute -right-10 -bottom-10 w-60 h-60 bg-brand-500/20 rounded-full blur-2xl pointer-events-none"></div>
-                
-                <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs font-semibold text-brand-300">
+              <div className="aspect-[4/5] rounded-3xl bg-gradient-to-tr from-brand-800 via-navy-900 to-navy-950 p-6 flex flex-col justify-between text-white shadow-2xl relative overflow-hidden group">
+                <img
+                  src={heroImg}
+                  alt={SITE_CONTENT.contact.instructorName}
+                  className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-950/40 to-transparent"></div>
+
+                <div className="relative z-10 space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-brand-300">
                     <i className="fa-solid fa-certificate"></i> Credenciamento DETRAN/RS Ativo
-                  </div>
-                  
-                  <div className="pt-6 text-center">
-                    <div className="w-28 h-28 mx-auto rounded-full bg-brand-500/20 border-2 border-brand-400 flex items-center justify-center text-brand-300 text-5xl shadow-xl">
-                      <i className="fa-solid fa-user-tie"></i>
-                    </div>
-                    <h3 className="font-heading text-2xl font-black text-white mt-4">{SITE_CONTENT.contact.instructorName}</h3>
-                    <p className="text-xs font-semibold text-slate-300">Especialista em Ensino Humanizado e Amaxofobia</p>
-                    <p className="text-[11px] text-emerald-400 font-bold mt-1">Sapiranga • Vale do Sinos / RS</p>
                   </div>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/15 text-center space-y-1">
-                  <span className="block text-xs text-brand-300 font-bold uppercase">Compromisso Ético</span>
-                  <p className="text-xs text-slate-200 italic">"{about.quote}"</p>
+                <div className="relative z-10 space-y-3">
+                  <div>
+                    <h3 className="font-heading text-2xl font-black text-white">{SITE_CONTENT.contact.instructorName}</h3>
+                    <p className="text-xs font-semibold text-slate-200">Especialista em Ensino Humanizado e Amaxofobia</p>
+                    <p className="text-[11px] text-emerald-400 font-bold mt-0.5">Sapiranga • Vale do Sinos / RS</p>
+                  </div>
+
+                  <div className="bg-navy-900/80 backdrop-blur-md rounded-2xl p-3.5 border border-white/15 text-center space-y-1">
+                    <span className="block text-[11px] text-brand-300 font-bold uppercase tracking-wider">Compromisso Ético</span>
+                    <p className="text-xs text-slate-200 italic">"{about.quote}"</p>
+                  </div>
                 </div>
               </div>
 
               {/* Badge Flutuante de Credencial */}
-              <div className="absolute -bottom-6 right-4 sm:right-6 bg-white py-3 px-5 rounded-2xl shadow-xl border border-slate-200 flex items-center gap-3">
+              <div className="absolute -bottom-8 right-4 sm:right-6 bg-white py-3 px-5 rounded-2xl shadow-xl border border-slate-200 flex items-center gap-3 z-20">
                 <div className="w-10 h-10 rounded-full bg-emerald-100 text-brand-700 flex items-center justify-center font-bold">
                   <i className="fa-solid fa-shield-check text-xl"></i>
                 </div>
