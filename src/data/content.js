@@ -14,8 +14,8 @@ export const SITE_CONTENT = {
     whatsappNumber: "5551996562126", // 55 (Brasil) + 51 (DDD RS) + 996562126
     phoneFormatted: "(51) 99656-2126",
     phoneTel: "+5551996562126",
-    instagramHandle: "@intrutor.helvio",
-    instagramUrl: "https://instagram.com/intrutor.helvio",
+    instagramHandle: "@instrutor.helvio",
+    instagramUrl: "https://instagram.com/instrutor.helvio",
     city: "Sapiranga",
     state: "RS",
     locationDisplay: "Sapiranga / RS e Região",

@@ -1,7 +1,7 @@
 # 🚗 Landing Page - Instrutor Hélvio (Autoescola & Treinamento para Habilitados)
 📍 **Atendimento:** Sapiranga / RS e Região (Campo Bom, Novo Hamburgo, Nova Hartz, Araricá, Taquara e Vale do Sinos)  
 📱 **WhatsApp:** (51) 99656-2126 (`5551996562126`)  
-📸 **Instagram:** [@intrutor.helvio](https://instagram.com/intrutor.helvio)  
+📸 **Instagram:** [@instrutor.helvio](https://instagram.com/instrutor.helvio)  
 
 ---
 
