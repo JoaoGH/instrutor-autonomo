@@ -1,12 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { SITE_CONTENT } from '../data/content';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import heroImg from '../assets/images/hero.webp';
 
 export default function About() {
-  const { about } = SITE_CONTENT;
+  const { t } = useTranslation();
+  const highlights = t('about.cardHighlights', { returnObjects: true }) || [];
 
-  const aboutWhatsAppUrl = getWhatsAppUrl(about.whatsappMessage);
+  const aboutWhatsAppUrl = getWhatsAppUrl(t('about.whatsappMessage'));
 
   return (
     <section id="sobre" className="py-20 bg-slate-50">
@@ -28,20 +30,20 @@ export default function About() {
 
                 <div className="relative z-10 space-y-4">
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-brand-300">
-                    <i className="fa-solid fa-certificate"></i> Credenciamento DETRAN/RS Ativo
+                    <i className="fa-solid fa-certificate"></i> {t('about.credentialBadge')}
                   </div>
                 </div>
 
                 <div className="relative z-10 space-y-3">
                   <div>
                     <h3 className="font-heading text-2xl font-black text-white">{SITE_CONTENT.contact.instructorName}</h3>
-                    <p className="text-xs font-semibold text-slate-200">Especialista em Ensino Humanizado e Amaxofobia</p>
-                    <p className="text-[11px] text-emerald-400 font-bold mt-0.5">Sapiranga • Vale do Sinos / RS</p>
+                    <p className="text-xs font-semibold text-slate-200">{t('about.subtitleRole')}</p>
+                    <p className="text-[11px] text-emerald-400 font-bold mt-0.5">{t('about.locationRole')}</p>
                   </div>
 
                   <div className="bg-navy-900/80 backdrop-blur-md rounded-2xl p-3.5 border border-white/15 text-center space-y-1">
-                    <span className="block text-[11px] text-brand-300 font-bold uppercase tracking-wider">Compromisso Ético</span>
-                    <p className="text-xs text-slate-200 italic">"{about.quote}"</p>
+                    <span className="block text-[11px] text-brand-300 font-bold uppercase tracking-wider">{t('about.commitmentLabel')}</span>
+                    <p className="text-xs text-slate-200 italic">"{t('about.quote')}"</p>
                   </div>
                 </div>
               </div>
@@ -52,8 +54,8 @@ export default function About() {
                   <i className="fa-solid fa-shield-check text-xl"></i>
                 </div>
                 <div>
-                  <span className="block text-xs font-bold text-navy-900">100% Legalizado</span>
-                  <span className="block text-[11px] text-slate-600">Normas Detran/RS & CTB</span>
+                  <span className="block text-xs font-bold text-navy-900">{t('about.legalBadgeTitle')}</span>
+                  <span className="block text-[11px] text-slate-600">{t('about.legalBadgeSub')}</span>
                 </div>
               </div>
 
@@ -64,26 +66,20 @@ export default function About() {
           <div className="lg:col-span-7 space-y-6">
             
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
-              <i className="fa-solid fa-user"></i> {about.badge}
+              <i className="fa-solid fa-user"></i> {t('about.badge')}
             </div>
 
             <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight">
-              {about.title}
+              {t('about.title')}
             </h2>
 
             <div className="space-y-4 text-slate-600 text-base leading-relaxed">
-              <p>
-                Olá! Sou o <strong>Instrutor Hélvio</strong>. Atuo com formação e aperfeiçoamento de condutores em{' '}
-                <strong>Sapiranga/RS e em toda a região do Vale do Sinos</strong>. Ao longo de mais de 10 anos de profissão, entendi que o maior obstáculo da maioria dos alunos não é a mecânica do carro, mas sim a{' '}
-                <strong>pressão, a ansiedade e a falta de paciência</strong> nos métodos tradicionais.
-              </p>
-              <p>
-                Por isso, desenvolvi uma didática <strong>humanizada, progressiva e acolhedora</strong>. Seja para vencer o medo na RS-239 e nas subidas da região, dominar a baliza ou conquistar a aprovação de primeira no Detran/RS, meu compromisso é te entregar segurança e autonomia passo a passo.
-              </p>
+              <p>{t('about.text1')}</p>
+              <p>{t('about.text2')}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              {about.cardHighlights.map((highlight, idx) => (
+              {Array.isArray(highlights) && highlights.map((highlight, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3">
                   <i className={`${highlight.icon} text-brand-600 text-xl mt-1`}></i>
                   <div>
@@ -102,7 +98,7 @@ export default function About() {
                 className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition"
               >
                 <i className="fa-brands fa-whatsapp text-lg"></i>
-                <span>{about.buttonText}</span>
+                <span>{t('about.buttonText')}</span>
               </a>
             </div>
 

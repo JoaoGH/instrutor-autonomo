@@ -1,8 +1,9 @@
 import React from 'react';
-import { SITE_CONTENT } from '../data/content';
+import { useTranslation } from 'react-i18next';
 
 export default function Diferenciais() {
-  const { diferenciais } = SITE_CONTENT;
+  const { t } = useTranslation();
+  const items = t('diferenciais.items', { returnObjects: true }) || [];
 
   return (
     <section id="diferenciais" className="py-20 bg-white border-y border-slate-200/60">
@@ -11,19 +12,19 @@ export default function Diferenciais() {
         {/* Cabeçalho */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider">
-            <i className="fa-solid fa-sparkles"></i> {diferenciais.badge}
+            <i className="fa-solid fa-sparkles"></i> {t('diferenciais.badge')}
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight">
-            {diferenciais.title}
+            {t('diferenciais.title')}
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            {diferenciais.subtitle}
+            {t('diferenciais.subtitle')}
           </p>
         </div>
 
         {/* Grid com 6 Diferenciais */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {diferenciais.items.map((item, idx) => (
+          {Array.isArray(items) && items.map((item, idx) => (
             <div
               key={idx}
               className="p-6 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-3 hover:bg-emerald-50/50 hover:border-brand-300 transition"

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { SITE_CONTENT } from '../data/content';
+import { useTranslation } from 'react-i18next';
 
 export default function Faq() {
-  const { faq } = SITE_CONTENT;
+  const { t } = useTranslation();
+  const items = t('faq.items', { returnObjects: true }) || [];
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFaq = (index) => {
@@ -16,19 +17,19 @@ export default function Faq() {
         {/* Cabeçalho */}
         <div className="text-center max-w-2xl mx-auto space-y-4 mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider">
-            <i className="fa-solid fa-circle-question"></i> {faq.badge}
+            <i className="fa-solid fa-circle-question"></i> {t('faq.badge')}
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
-            {faq.title}
+            {t('faq.title')}
           </h2>
           <p className="text-sm sm:text-base text-slate-600">
-            {faq.subtitle}
+            {t('faq.subtitle')}
           </p>
         </div>
 
         {/* Lista de Perguntas (Acordeão) */}
         <div className="space-y-4">
-          {faq.items.map((item, idx) => {
+          {Array.isArray(items) && items.map((item, idx) => {
             const isOpen = openIndex === idx;
 
             return (

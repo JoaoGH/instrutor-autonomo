@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Header() {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -23,7 +26,7 @@ export default function Header() {
   };
 
   const headerWhatsAppUrl = getWhatsAppUrl(
-    'Olá, Instrutor Hélvio! Gostaria de consultar valores e horários disponíveis para aulas práticas em Sapiranga/região.'
+    t('contact.defaultMessage')
   );
 
   return (
@@ -46,7 +49,7 @@ export default function Header() {
                 Instrutor <span className="text-brand-600">Hélvio</span>
               </span>
               <span className="text-[11px] font-semibold text-slate-700 uppercase tracking-wider block">
-                Sapiranga & Vale do Sinos / RS
+                {t('contact.locationDisplay')}
               </span>
             </div>
           </a>
@@ -54,27 +57,28 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             <a href="#inicio" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
-              Início
+              {t('nav.home')}
             </a>
             <a href="#servicos" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
-              Serviços
+              {t('nav.services')}
             </a>
             <a href="#diferenciais" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
-              Diferenciais
+              {t('nav.diferenciais')}
             </a>
             <a href="#sobre" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
-              Sobre Mim
+              {t('nav.about')}
             </a>
             <a href="#depoimentos" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
-              Depoimentos
+              {t('nav.testimonials')}
             </a>
             <a href="#duvidas" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
-              Dúvidas
+              {t('nav.faq')}
             </a>
           </nav>
 
-          {/* CTA Header Button */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* CTA Header Button & Language Switcher */}
+          <div className="hidden sm:flex items-center gap-4">
+            <LanguageSwitcher />
             <a
               href={headerWhatsAppUrl}
               target="_blank"
@@ -82,16 +86,17 @@ export default function Header() {
               className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md hover:shadow-lg shadow-brand-600/25 transition-all hover:scale-105 active:scale-95"
             >
               <i className="fa-brands fa-whatsapp text-lg"></i>
-              <span>Agendar Aula</span>
+              <span>{t('nav.scheduleBtn')}</span>
             </a>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
-          <div className="flex lg:hidden">
+          {/* Mobile Menu Toggle Button & Switcher */}
+          <div className="flex lg:hidden items-center gap-2">
+            <LanguageSwitcher />
             <button
               onClick={toggleMobileMenu}
               type="button"
-              aria-label={isMobileMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
+              aria-label={isMobileMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
               aria-expanded={isMobileMenuOpen}
               className="p-2.5 rounded-xl text-slate-700 hover:text-navy-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500"
             >
@@ -114,42 +119,42 @@ export default function Header() {
             onClick={closeMobileMenu}
             className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700"
           >
-            Início
+            {t('nav.home')}
           </a>
           <a
             href="#servicos"
             onClick={closeMobileMenu}
             className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700"
           >
-            Serviços e Aulas
+            {t('nav.servicesAndClasses')}
           </a>
           <a
             href="#diferenciais"
             onClick={closeMobileMenu}
             className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700"
           >
-            Por que me escolher?
+            {t('nav.whyChooseMe')}
           </a>
           <a
             href="#sobre"
             onClick={closeMobileMenu}
             className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700"
           >
-            Sobre o Instrutor
+            {t('nav.aboutInstructor')}
           </a>
           <a
             href="#depoimentos"
             onClick={closeMobileMenu}
             className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700"
           >
-            Depoimentos de Alunos
+            {t('nav.studentTestimonials')}
           </a>
           <a
             href="#duvidas"
             onClick={closeMobileMenu}
             className="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-700"
           >
-            Perguntas Frequentes
+            {t('nav.faqFull')}
           </a>
 
           <div className="pt-3 border-t border-slate-100">
@@ -161,7 +166,7 @@ export default function Header() {
               className="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl bg-brand-600 text-white font-bold text-base shadow-lg shadow-brand-600/30"
             >
               <i className="fa-brands fa-whatsapp text-xl"></i>
-              <span>Falar no WhatsApp Agora</span>
+              <span>{t('nav.scheduleBtnMobile')}</span>
             </a>
           </div>
         </div>

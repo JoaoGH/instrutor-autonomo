@@ -1,26 +1,50 @@
-import React, { useState } from 'react';
-import { SITE_CONTENT } from '../data/content';
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Simulator() {
-  const { simulator } = SITE_CONTENT;
+  const { t } = useTranslation();
 
-  const [selectedServiceId, setSelectedServiceId] = useState(simulator.options[0].id);
+  const options = t('simulator.options', { returnObjects: true }) || [];
+  const periods = t('simulator.periods', { returnObjects: true }) || [];
+  const transmissions = t('simulator.transmissions', { returnObjects: true }) || [];
+
+  const [selectedServiceId, setSelectedServiceId] = useState('habilitados');
   const [studentName, setStudentName] = useState('');
-  const [period, setPeriod] = useState(simulator.periods[0].value);
-  const [transmission, setTransmission] = useState(simulator.transmissions[0].value);
+  const [period, setPeriod] = useState('');
+  const [transmission, setTransmission] = useState('');
 
-  const currentOption = simulator.options.find((opt) => opt.id === selectedServiceId) || simulator.options[0];
-  const serviceTitle = currentOption.service;
+  // Sincronizar fallbacks para selects quando as traduções carregarem
+  useEffect(() => {
+    if (periods.length > 0 && !period) {
+      setPeriod(periods[0].value);
+    }
+  }, [periods, period]);
 
-  const displayName = studentName.trim() || 'futuro(a) aluno(a)';
+  useEffect(() => {
+    if (transmissions.length > 0 && !transmission) {
+      setTransmission(transmissions[0].value);
+    }
+  }, [transmissions, transmission]);
+
+  const currentOption = Array.isArray(options) ? options.find((opt) => opt.id === selectedServiceId) || options[0] : null;
+  const serviceTitle = currentOption ? currentOption.service : '';
+
+  const displayName = studentName.trim() || t('simulator.defaultStudentName');
   
-  const composedMessage = `Olá, Instrutor Hélvio! Meu nome é *${displayName}*.\n\n` +
-    `📍 *Região:* Sapiranga / Vale do Sinos - RS\n` +
-    `📌 *Interesse:* ${serviceTitle}\n` +
-    `⏰ *Disponibilidade:* ${period}\n` +
-    `🚗 *Preferência:* ${transmission}\n\n` +
-    `Gostaria de saber valores de pacotes e datas livres na sua agenda!`;
+  const greetingStr = t('simulator.composedGreeting', { name: displayName });
+  const regionStr = t('simulator.composedRegion');
+  const interestStr = t('simulator.composedInterest', { service: serviceTitle });
+  const availabilityStr = t('simulator.composedAvailability', { period: period || (periods[0] && periods[0].value) || '' });
+  const preferenceStr = t('simulator.composedPreference', { transmission: transmission || (transmissions[0] && transmissions[0].value) || '' });
+  const closingStr = t('simulator.composedClosing');
+
+  const composedMessage = `${greetingStr}\n\n` +
+    `${regionStr}\n` +
+    `${interestStr}\n` +
+    `${availabilityStr}\n` +
+    `${preferenceStr}\n\n` +
+    `${closingStr}`;
 
   const dynamicWhatsAppUrl = getWhatsAppUrl(composedMessage);
 
@@ -32,13 +56,13 @@ export default function Simulator() {
           
           <div className="text-center max-w-2xl mx-auto space-y-3 mb-8">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase">
-              <i className="fa-solid fa-sliders"></i> {simulator.badge}
+              <i className="fa-solid fa-sliders"></i> {t('simulator.badge')}
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-navy-900">
-              {simulator.title}
+              {t('simulator.title')}
             </h2>
             <p className="text-sm text-slate-600">
-              {simulator.subtitle}
+              {t('simulator.subtitle')}
             </p>
           </div>
 
@@ -47,10 +71,10 @@ export default function Simulator() {
             {/* Passo 1: Selecionar Serviço */}
             <div>
               <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">
-                {simulator.step1Title}
+                {t('simulator.step1Title')}
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {simulator.options.map((option) => {
+                {Array.isArray(options) && options.map((option) => {
                   const isSelected = selectedServiceId === option.id;
 
                   return (
@@ -80,29 +104,29 @@ export default function Simulator() {
               
               <div>
                 <label htmlFor="student-name" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  {simulator.step2Title}
+                  {t('simulator.step2Title')}
                 </label>
                 <input
                   type="text"
                   id="student-name"
                   value={studentName}
                   onChange={(e) => setStudentName(e.target.value)}
-                  placeholder="Ex: Mariana Silva"
+                  placeholder={t('simulator.namePlaceholder')}
                   className="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 bg-slate-50"
                 />
               </div>
 
               <div>
                 <label htmlFor="student-period" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  {simulator.step3Title}
+                  {t('simulator.step3Title')}
                 </label>
                 <select
                   id="student-period"
-                  value={period}
+                  value={period || (periods[0] && periods[0].value) || ''}
                   onChange={(e) => setPeriod(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 bg-slate-50"
                 >
-                  {simulator.periods.map((p, idx) => (
+                  {Array.isArray(periods) && periods.map((p, idx) => (
                     <option key={idx} value={p.value}>
                       {p.label}
                     </option>
@@ -112,17 +136,17 @@ export default function Simulator() {
 
               <div>
                 <label htmlFor="student-transmission" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  {simulator.step4Title}
+                  {t('simulator.step4Title')}
                 </label>
                 <select
                   id="student-transmission"
-                  value={transmission}
+                  value={transmission || (transmissions[0] && transmissions[0].value) || ''}
                   onChange={(e) => setTransmission(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 bg-slate-50"
                 >
-                  {simulator.transmissions.map((t, idx) => (
-                    <option key={idx} value={t.value}>
-                      {t.label}
+                  {Array.isArray(transmissions) && transmissions.map((tItem, idx) => (
+                    <option key={idx} value={tItem.value}>
+                      {tItem.label}
                     </option>
                   ))}
                 </select>
@@ -133,7 +157,7 @@ export default function Simulator() {
             {/* Preview da Mensagem Gerada */}
             <div className="p-4 rounded-2xl bg-emerald-900/5 border border-emerald-200">
               <span className="block text-[11px] font-bold text-emerald-800 uppercase tracking-wider mb-1">
-                <i className="fa-brands fa-whatsapp text-brand-600 mr-1"></i> Preview da mensagem que será enviada:
+                <i className="fa-brands fa-whatsapp text-brand-600 mr-1"></i> {t('simulator.previewLabel')}
               </span>
               <p className="text-xs text-slate-700 font-mono italic whitespace-pre-line">
                 "{composedMessage}"
@@ -149,7 +173,7 @@ export default function Simulator() {
                 className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-base sm:text-lg shadow-xl shadow-brand-600/30 transition hover:scale-105 active:scale-95"
               >
                 <i className="fa-brands fa-whatsapp text-2xl"></i>
-                <span>{simulator.buttonText}</span>
+                <span>{t('simulator.buttonText')}</span>
               </a>
             </div>
 
