@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { SITE_CONTENT } from '../data/content';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import heroImg from '../assets/images/hero.webp';
 
@@ -23,7 +22,7 @@ export default function About() {
               <div className="aspect-[4/5] rounded-3xl bg-gradient-to-tr from-brand-800 via-navy-900 to-navy-950 p-6 flex flex-col justify-between text-white shadow-2xl relative overflow-hidden group">
                 <img
                   src={heroImg}
-                  alt={SITE_CONTENT.contact.instructorName}
+                  alt={t('contact.instructorName')}
                   className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-950/40 to-transparent"></div>
@@ -36,7 +35,7 @@ export default function About() {
 
                 <div className="relative z-10 space-y-3">
                   <div>
-                    <h3 className="font-heading text-2xl font-black text-white">{SITE_CONTENT.contact.instructorName}</h3>
+                    <h3 className="font-heading text-2xl font-black text-white">{t('contact.instructorName')}</h3>
                     <p className="text-xs font-semibold text-slate-200">{t('about.subtitleRole')}</p>
                     <p className="text-[11px] text-emerald-400 font-bold mt-0.5">{t('about.locationRole')}</p>
                   </div>

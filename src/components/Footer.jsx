@@ -1,10 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { SITE_CONTENT } from '../data/content';
+import { CONTACT_INFO } from '../data/content';
 
 export default function Footer() {
   const { t } = useTranslation();
-  const { contact } = SITE_CONTENT;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -56,7 +55,7 @@ export default function Footer() {
 
         {/* Copyright & Informações Finais */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[11px] text-slate-400">
-          <p>© {currentYear} {t('footer.rights')} {t('contact.city')}/{contact.state}.</p>
+          <p>© {currentYear} {t('footer.rights')} {t('contact.city')}/{CONTACT_INFO.state}.</p>
           <p className="flex items-center gap-1">
             {t('footer.tagline')}
           </p>

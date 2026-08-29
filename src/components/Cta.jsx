@@ -1,11 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { SITE_CONTENT } from '../data/content';
+import { CONTACT_INFO } from '../data/content';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Cta() {
   const { t } = useTranslation();
-  const { contact } = SITE_CONTENT;
 
   const ctaWhatsAppUrl = getWhatsAppUrl(t('cta.whatsappMessage'));
 
@@ -50,8 +49,8 @@ export default function Cta() {
             <div className="flex flex-col items-center gap-1.5">
               <i className="fa-solid fa-phone text-brand-400 text-lg"></i>
               <span className="font-bold text-white">{t('cta.phoneLabel')}</span>
-              <a href={`tel:${contact.phoneTel}`} className="hover:text-white transition">
-                {contact.phoneFormatted}
+              <a href={`tel:${CONTACT_INFO.phoneTel}`} className="hover:text-white transition">
+                {CONTACT_INFO.phoneFormatted}
               </a>
             </div>
 
@@ -72,14 +71,14 @@ export default function Cta() {
           <div className="pt-4 flex items-center justify-center gap-4">
             <span className="text-xs text-slate-400 mr-2">{t('cta.instagramFollow')}</span>
             <a
-              href={contact.instagramUrl}
+              href={CONTACT_INFO.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Instagram do ${t('contact.instructorName')}`}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 hover:bg-brand-600 text-white transition shadow text-xs font-semibold"
             >
               <i className="fa-brands fa-instagram text-base text-pink-400"></i>
-              <span>{contact.instagramHandle}</span>
+              <span>{CONTACT_INFO.instagramHandle}</span>
             </a>
           </div>
 

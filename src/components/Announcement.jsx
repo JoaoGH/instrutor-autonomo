@@ -1,10 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { SITE_CONTENT } from '../data/content';
+import { CONTACT_INFO } from '../data/content';
 
 export default function Announcement() {
   const { t } = useTranslation();
-  const { contact } = SITE_CONTENT;
 
   return (
     <div className="bg-navy-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-navy-800">
@@ -19,10 +18,10 @@ export default function Announcement() {
             <i className="fa-solid fa-shield-halved text-brand-400"></i> {t('announcement.detranBadge')}
           </span>
           <a
-            href={`tel:${contact.phoneTel}`}
+            href={`tel:${CONTACT_INFO.phoneTel}`}
             className="inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition"
           >
-            <i className="fa-solid fa-phone text-brand-400"></i> {contact.phoneFormatted}
+            <i className="fa-solid fa-phone text-brand-400"></i> {CONTACT_INFO.phoneFormatted}
           </a>
         </div>
       </div>
