@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import heroImg from '../assets/images/hero.webp';
@@ -13,11 +12,9 @@ export default function About() {
     <section id="sobre" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
           {/* Foto / Avatar & Credenciamento */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md">
-              
               {/* Moldura Visual */}
               <div className="aspect-[4/5] rounded-3xl bg-gradient-to-tr from-brand-800 via-navy-900 to-navy-950 p-6 flex flex-col justify-between text-white shadow-2xl relative overflow-hidden group">
                 <img
@@ -35,14 +32,22 @@ export default function About() {
 
                 <div className="relative z-10 space-y-3">
                   <div>
-                    <h3 className="font-heading text-2xl font-black text-white">{t('contact.instructorName')}</h3>
-                    <p className="text-xs font-semibold text-slate-200">{t('about.subtitleRole')}</p>
-                    <p className="text-[11px] text-emerald-400 font-bold mt-0.5">{t('about.locationRole')}</p>
+                    <h3 className="font-heading text-2xl font-black text-white">
+                      {t('contact.instructorName')}
+                    </h3>
+                    <p className="text-xs font-semibold text-slate-200">
+                      {t('about.subtitleRole')}
+                    </p>
+                    <p className="text-[11px] text-emerald-400 font-bold mt-0.5">
+                      {t('about.locationRole')}
+                    </p>
                   </div>
 
                   <div className="bg-navy-900/80 backdrop-blur-md rounded-2xl p-3.5 border border-white/15 text-center space-y-1">
-                    <span className="block text-[11px] text-brand-300 font-bold uppercase tracking-wider">{t('about.commitmentLabel')}</span>
-                    <p className="text-xs text-slate-200 italic">"{t('about.quote')}"</p>
+                    <span className="block text-[11px] text-brand-300 font-bold uppercase tracking-wider">
+                      {t('about.commitmentLabel')}
+                    </span>
+                    <p className="text-xs text-slate-200 italic">&quot;{t('about.quote')}&quot;</p>
                   </div>
                 </div>
               </div>
@@ -53,17 +58,19 @@ export default function About() {
                   <i className="fa-solid fa-shield-check text-xl"></i>
                 </div>
                 <div>
-                  <span className="block text-xs font-bold text-navy-900">{t('about.legalBadgeTitle')}</span>
-                  <span className="block text-[11px] text-slate-600">{t('about.legalBadgeSub')}</span>
+                  <span className="block text-xs font-bold text-navy-900">
+                    {t('about.legalBadgeTitle')}
+                  </span>
+                  <span className="block text-[11px] text-slate-600">
+                    {t('about.legalBadgeSub')}
+                  </span>
                 </div>
               </div>
-
             </div>
           </div>
 
           {/* Biografia e Metodologia */}
           <div className="lg:col-span-7 space-y-6">
-            
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
               <i className="fa-solid fa-user"></i> {t('about.badge')}
             </div>
@@ -78,15 +85,19 @@ export default function About() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              {Array.isArray(highlights) && highlights.map((highlight, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3">
-                  <i className={`${highlight.icon} text-brand-600 text-xl mt-1`}></i>
-                  <div>
-                    <h4 className="font-bold text-navy-900 text-sm">{highlight.title}</h4>
-                    <p className="text-xs text-slate-600">{highlight.description}</p>
+              {Array.isArray(highlights) &&
+                highlights.map((highlight, idx) => (
+                  <div
+                    key={idx}
+                    className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3"
+                  >
+                    <i className={`${highlight.icon} text-brand-600 text-xl mt-1`}></i>
+                    <div>
+                      <h4 className="font-bold text-navy-900 text-sm">{highlight.title}</h4>
+                      <p className="text-xs text-slate-600">{highlight.description}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
 
             <div className="pt-4">
@@ -100,9 +111,7 @@ export default function About() {
                 <span>{t('about.buttonText')}</span>
               </a>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { getWhatsAppUrl } from '../utils/whatsapp';
@@ -25,9 +25,7 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
-  const headerWhatsAppUrl = getWhatsAppUrl(
-    t('contact.defaultMessage')
-  );
+  const headerWhatsAppUrl = getWhatsAppUrl(t('contact.defaultMessage'));
 
   return (
     <header
@@ -38,7 +36,6 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3 group" onClick={closeMobileMenu}>
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
@@ -56,22 +53,40 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            <a href="#inicio" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
+            <a
+              href="#inicio"
+              className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition"
+            >
               {t('nav.home')}
             </a>
-            <a href="#servicos" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
+            <a
+              href="#servicos"
+              className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition"
+            >
               {t('nav.services')}
             </a>
-            <a href="#diferenciais" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
+            <a
+              href="#diferenciais"
+              className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition"
+            >
               {t('nav.diferenciais')}
             </a>
-            <a href="#sobre" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
+            <a
+              href="#sobre"
+              className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition"
+            >
               {t('nav.about')}
             </a>
-            <a href="#depoimentos" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
+            <a
+              href="#depoimentos"
+              className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition"
+            >
               {t('nav.testimonials')}
             </a>
-            <a href="#duvidas" className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition">
+            <a
+              href="#duvidas"
+              className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition"
+            >
               {t('nav.faq')}
             </a>
           </nav>
@@ -107,7 +122,6 @@ export default function Header() {
               )}
             </button>
           </div>
-
         </div>
       </div>
 

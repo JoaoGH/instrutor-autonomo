@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Toast() {
   const { t } = useTranslation();
-  const activities = t('toast.activities', { returnObjects: true }) || [];
+
+  const rawActivities = t('toast.activities', { returnObjects: true });
+  const activities = Array.isArray(rawActivities) ? rawActivities : [];
+  const activitiesLength = activities.length;
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
-    if (!Array.isArray(activities) || activities.length === 0 || isDismissed) return;
+    if (activitiesLength === 0 || isDismissed) return;
 
     // Primeiro toast após 4s
     const initialTimer = setTimeout(() => {
@@ -24,7 +28,7 @@ export default function Toast() {
 
     // Ciclo de novos toasts a cada 24s
     const intervalTimer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % activities.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % activitiesLength);
       setIsVisible(true);
 
       setTimeout(() => {
@@ -36,17 +40,15 @@ export default function Toast() {
       clearTimeout(initialTimer);
       clearInterval(intervalTimer);
     };
-  }, [activities.length, isDismissed]);
+  }, [activitiesLength, isDismissed]);
 
-  if (isDismissed || !Array.isArray(activities) || activities.length === 0) return null;
+  if (isDismissed || activitiesLength === 0) return null;
 
   return (
     <aside
       aria-label={t('toast.notifLabel')}
       className={`fixed bottom-6 left-6 z-50 max-w-sm bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-slate-200 transition-all duration-500 flex items-center gap-3 ${
-        isVisible
-          ? 'translate-y-0 opacity-100'
-          : 'translate-y-24 opacity-0 pointer-events-none'
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0 pointer-events-none'
       }`}
     >
       <div className="w-10 h-10 rounded-xl bg-emerald-100 text-brand-700 flex items-center justify-center text-lg flex-shrink-0">
