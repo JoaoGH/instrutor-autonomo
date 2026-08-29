@@ -1,8 +1,9 @@
 import React from 'react';
-import { SITE_CONTENT } from '../data/content';
+import { useTranslation } from 'react-i18next';
+import { CONTACT_INFO } from '../data/content';
 
 export default function Footer() {
-  const { footer, contact } = SITE_CONTENT;
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -18,35 +19,35 @@ export default function Footer() {
                 <i className="fa-solid fa-steering-wheel"></i>
               </div>
               <span className="font-heading font-extrabold text-lg text-white">
-                {contact.instructorName}
+                {t('contact.instructorName')}
               </span>
             </div>
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
-              {footer.brandDescription}
+              {t('footer.brandDescription')}
             </p>
             <p className="text-xs text-slate-300">
-              <i className="fa-solid fa-location-dot text-brand-400 mr-1"></i> Atendendo: {contact.coveredRegions}
+              <i className="fa-solid fa-location-dot text-brand-400 mr-1"></i> {t('footer.serving')} {t('contact.coveredRegions')}
             </p>
           </div>
 
           {/* Coluna 2: Links Rápidos */}
           <div className="space-y-2.5">
-            <span className="block font-bold text-white text-sm">Navegação Rápida</span>
+            <span className="block font-bold text-white text-sm">{t('footer.quickNav')}</span>
             <ul className="space-y-1.5">
-              <li><a href="#inicio" className="hover:text-brand-400 transition">Início</a></li>
-              <li><a href="#servicos" className="hover:text-brand-400 transition">Serviços e Aulas</a></li>
-              <li><a href="#diferenciais" className="hover:text-brand-400 transition">Diferenciais</a></li>
-              <li><a href="#sobre" className="hover:text-brand-400 transition">Sobre o Instrutor</a></li>
-              <li><a href="#depoimentos" className="hover:text-brand-400 transition">Depoimentos</a></li>
-              <li><a href="#duvidas" className="hover:text-brand-400 transition">FAQ</a></li>
+              <li><a href="#inicio" className="hover:text-brand-400 transition">{t('nav.home')}</a></li>
+              <li><a href="#servicos" className="hover:text-brand-400 transition">{t('nav.servicesAndClasses')}</a></li>
+              <li><a href="#diferenciais" className="hover:text-brand-400 transition">{t('nav.diferenciais')}</a></li>
+              <li><a href="#sobre" className="hover:text-brand-400 transition">{t('nav.aboutInstructor')}</a></li>
+              <li><a href="#depoimentos" className="hover:text-brand-400 transition">{t('nav.testimonials')}</a></li>
+              <li><a href="#duvidas" className="hover:text-brand-400 transition">{t('nav.faq')}</a></li>
             </ul>
           </div>
 
           {/* Coluna 3: Aviso Legal & Conformidade Detran */}
           <div className="space-y-2.5">
-            <span className="block font-bold text-white text-sm">Aviso Legal & DETRAN</span>
+            <span className="block font-bold text-white text-sm">{t('footer.legalTitle')}</span>
             <p className="text-[11px] text-slate-400 leading-relaxed">
-              {footer.legalDisclaimer}
+              {t('footer.legalDisclaimer')}
             </p>
           </div>
 
@@ -54,9 +55,9 @@ export default function Footer() {
 
         {/* Copyright & Informações Finais */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[11px] text-slate-400">
-          <p>© {currentYear} {footer.rights} Sapiranga/{contact.state}.</p>
+          <p>© {currentYear} {t('footer.rights')} {t('contact.city')}/{CONTACT_INFO.state}.</p>
           <p className="flex items-center gap-1">
-            Atendimento personalizado e humanizado no trânsito.
+            {t('footer.tagline')}
           </p>
         </div>
 

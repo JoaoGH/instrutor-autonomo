@@ -1,17 +1,19 @@
 import React from 'react';
-import { SITE_CONTENT } from '../data/content';
+import { useTranslation } from 'react-i18next';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export default function FloatingWhatsApp() {
+  const { t } = useTranslation();
+
   const floatingWhatsAppUrl = getWhatsAppUrl(
-    'Olá, Instrutor Hélvio! Gostaria de tirar dúvidas sobre as aulas práticas em Sapiranga/região.'
+    t('contact.defaultMessage')
   );
 
   return (
     <div className="whatsapp-float-container fixed bottom-6 right-6 z-50 flex items-center gap-3">
       {/* Tooltip interativo */}
       <div className="whatsapp-tooltip hidden md:block bg-white text-slate-800 text-xs font-bold py-2 px-3.5 rounded-xl shadow-xl border border-slate-200 whitespace-nowrap">
-        <span className="text-brand-600 mr-1">●</span> {SITE_CONTENT.contact.city} e Região: Fale comigo no WhatsApp!
+        <span className="text-brand-600 mr-1">●</span> {t('floatingWhatsApp.tooltip')}
       </div>
 
       {/* Botão de Ação Flutuante */}
@@ -19,7 +21,7 @@ export default function FloatingWhatsApp() {
         href={floatingWhatsAppUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Abrir conversa no WhatsApp com o ${SITE_CONTENT.contact.instructorName}`}
+        aria-label={t('floatingWhatsApp.ariaLabel')}
         className="animate-pulse-whatsapp relative w-16 h-16 rounded-full bg-[#25d366] hover:bg-[#1ebd5b] text-white flex items-center justify-center text-3xl shadow-2xl transition hover:scale-110 active:scale-95"
       >
         <i className="fa-brands fa-whatsapp"></i>

@@ -1,0 +1,341 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "servicesAndClasses": "Services & Classes",
+    "diferenciais": "Why Choose Me",
+    "whyChooseMe": "Why Choose Me?",
+    "about": "About Me",
+    "aboutInstructor": "About the Instructor",
+    "testimonials": "Testimonials",
+    "studentTestimonials": "Student Testimonials",
+    "faq": "FAQ",
+    "faqFull": "Frequently Asked Questions",
+    "scheduleBtn": "Schedule Class",
+    "scheduleBtnMobile": "Talk on WhatsApp Now",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "contact": {
+    "instructorName": "Instructor Hélvio",
+    "roleTitle": "DETRAN/RS Certified Driving Instructor",
+    "city": "Sapiranga",
+    "state": "RS",
+    "locationDisplay": "Sapiranga / RS and Region",
+    "coveredRegions": "Sapiranga, Campo Bom, Novo Hamburgo, Nova Hartz, Araricá, Taquara and Vale do Sinos / RS",
+    "operatingHours": "Monday to Saturday: 06:30 AM to 08:30 PM | Sundays by arrangement",
+    "defaultMessage": "Hello, Instructor Hélvio! I saw your page and would like information about practical driving lessons in Sapiranga and region."
+  },
+  "announcement": {
+    "badge": "Open Schedule",
+    "text": "Practical lessons in Sapiranga/RS and region • Slots open for this week and weekends",
+    "detranBadge": "DETRAN/RS Certified Instructor"
+  },
+  "hero": {
+    "badge": "🏆 DETRAN/RS Certified Instructor • Sapiranga and Vale do Sinos",
+    "titleMain": "Get your driver's license and drive with",
+    "titleHighlight": "peace of mind, patience and safety in Sapiranga and region!",
+    "subtitle": "Personalized practical lessons for those getting their 1st license, needing focused reinforcement for the Detran/RS practical exam, or wanting to overcome driving fear in real traffic. Learn without stress, at your pace, with true patience.",
+    "ctaPrimary": "Schedule your Lesson via WhatsApp",
+    "ctaSecondary": "View Services and Packages",
+    "socialProof": "4.9/5 (+500 passed students)",
+    "feature1": "Dual-control car with A/C",
+    "feature2": "Flexible Schedules",
+    "floatingBadge1": {
+      "title": "98% PASS RATE",
+      "subtitle": "on Detran/RS practical exam"
+    },
+    "floatingBadge2": {
+      "title": "Absolute Patience",
+      "subtitle": "specialist in anxious students"
+    },
+    "card": {
+      "status": "Online Service",
+      "badgeResponse": "Fast Response",
+      "title": "Your Driver's License Made Simple",
+      "description": "Teaching focused on overcoming mental blocks and building practical driving confidence.",
+      "pill": "Zero stress and zero scolding",
+      "checks": [
+        { "strong": "Hassle-free parking:", "text": " Simple visual tricks so you park right on your first try." },
+        { "strong": "Clutch control:", "text": " Never stall your car on hills and inclines again." },
+        { "strong": "In your car or ours:", "text": " Practical lessons in dual-control vehicle or in your own car." }
+      ],
+      "buttonText": "Ask Questions on WhatsApp"
+    },
+    "whatsappMsgHero": "Hello, Instructor Hélvio! I saw your page and want to schedule a practical lesson in Sapiranga/region. Could you send me details?",
+    "whatsappMsgCard": "Hello, Instructor Hélvio! I would like to ask questions about practical lessons in Sapiranga/region."
+  },
+  "metrics": [
+    { "number": "+25 Years", "label": "Of Practical Teaching Experience" },
+    { "number": "+500", "label": "Passed Students" },
+    { "number": "98%", "label": "Detran/RS Practical Pass Rate" },
+    { "number": "100%", "label": "Individualized Attention & Teaching" }
+  ],
+  "services": {
+    "badge": "Tailored Services",
+    "title": "How can I help you gain your independence behind the wheel?",
+    "subtitle": "Personalized practical training in Sapiranga/RS and neighboring cities, focused on your safety and rhythm.",
+    "items": [
+      {
+        "id": "perde-medo",
+        "icon": "fa-solid fa-heart-circle-check",
+        "tag": "Main Specialty",
+        "title": "Training for Licensed Drivers (Overcome Fear)",
+        "description": "Have a license stored in the drawer due to fear or insecurity? We address emotional blocks step-by-step with progressive methods, calmly and without pressure.",
+        "bullets": [
+          "Practice on your real routes (home, work, highway, hills, and access roads)",
+          "Safe clutch control on steep hills and heavy traffic",
+          "Lessons in dual-control driving school car or in your own vehicle",
+          "Maneuvers in tight garages, shopping centers, and parking lots"
+        ],
+        "ctaText": "I Want to Overcome Driving Fear",
+        "whatsappMessage": "Hello, Instructor Hélvio! I have a driver's license but feel fear/insecurity driving in Sapiranga and region. I'd like info about training for licensed drivers."
+      },
+      {
+        "id": "reforco-detran",
+        "icon": "fa-solid fa-flag-checkered",
+        "tag": "Most Popular",
+        "isPopular": true,
+        "title": "Focused Reinforcement for Detran/RS Practical Exam",
+        "description": "Failed or feeling unconfident about the practical test? We do precise training on exact test routes and focus on where students lose points.",
+        "bullets": [
+          "Precision Parallel Parking: Foolproof visual reference points",
+          "Training focused on official routes and Detran/RS exam requirements",
+          "Real timed mock test identical to the official evaluation",
+          "Emotional control and breathing techniques for exam day"
+        ],
+        "ctaText": "Secure Detran Reinforcement",
+        "whatsappMessage": "Hello, Instructor Hélvio! I would like reinforcement lessons for the Detran/RS practical exam in Sapiranga/region to guarantee my pass."
+      },
+      {
+        "id": "primeira-habilitacao",
+        "icon": "fa-solid fa-id-card",
+        "tag": "For Beginners",
+        "title": "Support for 1st Driver's License",
+        "description": "Never touched a steering wheel? Learn from absolute scratch with a calm, didactic method without psychological pressure.",
+        "bullets": [
+          "Detailed step-by-step: pedals, gear shift, clutch, and smooth synchronization",
+          "Development of peripheral vision and defensive driving reflexes",
+          "Comfortable car with air conditioning and light steering",
+          "Building correct, safe habits right from your first lesson"
+        ],
+        "ctaText": "Start My 1st License",
+        "whatsappMessage": "Hello, Instructor Hélvio! I want to get my 1st license from scratch in Sapiranga/region. Can you send me prices and details?"
+      }
+    ],
+    "banner": {
+      "tag": "Flexible Options",
+      "title": "Need single lessons or lesson packages?",
+      "description": "We offer both single lessons and packages of 5, 10, or 15 lessons in Sapiranga and region, with easy payment options via Pix and Card.",
+      "buttonText": "View Package Pricing",
+      "whatsappMessage": "Hello, Instructor Hélvio! I would like to check pricing for single lessons and packages in Sapiranga and region."
+    }
+  },
+  "diferenciais": {
+    "badge": "Why train with me?",
+    "title": "The method that turns insecurity into independence",
+    "subtitle": "Say goodbye to fear of making mistakes, impatient instructors, and rigid lessons. Learn to drive for real.",
+    "items": [
+      {
+        "icon": "fa-solid fa-hand-holding-heart",
+        "title": "Absolute Patience & Zero Scolding",
+        "description": "You have every right to make mistakes while learning. Our environment is welcoming and calm so you gain confidence without anxiety."
+      },
+      {
+        "icon": "fa-solid fa-shield-halved",
+        "title": "Certified Dual-Control Car",
+        "description": "Brake and clutch pedals on the instructor's side. If anything unexpected happens, safety is immediate and total."
+      },
+      {
+        "icon": "fa-solid fa-calendar-days",
+        "title": "Flexible Schedules",
+        "description": "Lessons available in the morning, afternoon, evening, and weekends. Fit training easily into your work or family routine."
+      },
+      {
+        "icon": "fa-solid fa-map-location-dot",
+        "title": "Service in Sapiranga and Region",
+        "description": "Flexible meeting points in Sapiranga, Campo Bom, Novo Hamburgo, and nearby towns by prior arrangement."
+      },
+      {
+        "icon": "fa-solid fa-route",
+        "title": "Real-World Traffic Practice",
+        "description": "Practice in everyday real-world situations: highways, steep local hills, tight garages, intersections, and lane changes."
+      },
+      {
+        "icon": "fa-solid fa-sack-dollar",
+        "title": "Affordable Rates & No Hidden Fees",
+        "description": "Fair, transparent pricing directly with your instructor, with no bureaucracy or hidden fees. Easy payments via Pix or Card."
+      }
+    ]
+  },
+  "simulator": {
+    "badge": "Quick Booking",
+    "title": "Build your customized lesson plan",
+    "subtitle": "Select the type of lesson you need and generate your ready-to-send message on WhatsApp with 1 click.",
+    "step1Title": "1. What is your main goal?",
+    "step2Title": "2. Your Name (optional)",
+    "step3Title": "3. Preferred Time Slot",
+    "step4Title": "4. Vehicle Preference",
+    "namePlaceholder": "Ex: Mariana Silva",
+    "defaultStudentName": "future student",
+    "options": [
+      { "id": "habilitados", "icon": "fa-solid fa-heart-pulse", "title": "Overcome Fear", "subtitle": "Already have license", "service": "Training for Licensed Drivers (Overcoming Driving Fear)" },
+      { "id": "reforco", "icon": "fa-solid fa-flag-checkered", "title": "Detran/RS Exam", "subtitle": "Pass the practical test", "service": "Focused Reinforcement for Detran/RS Exam" },
+      { "id": "primeira", "icon": "fa-solid fa-id-card", "title": "1st License", "subtitle": "Start from scratch", "service": "1st Driver's License from Scratch" }
+    ],
+    "periods": [
+      { "value": "Morning (flexible schedule)", "label": "Morning" },
+      { "value": "Afternoon (flexible schedule)", "label": "Afternoon" },
+      { "value": "Evening (after work)", "label": "Evening (after work)" },
+      { "value": "Weekends (Saturday/Sunday)", "label": "Weekends" }
+    ],
+    "transmissions": [
+      { "value": "Dual-control driving school car", "label": "Dual-control Car" },
+      { "value": "In my own vehicle", "label": "In my own car" }
+    ],
+    "previewLabel": "Preview of the message to be sent:",
+    "composedGreeting": "Hello, Instructor Hélvio! My name is *{{name}}*.",
+    "composedRegion": "📍 *Region:* Sapiranga / Vale do Sinos - RS",
+    "composedInterest": "📌 *Interest:* {{service}}",
+    "composedAvailability": "⏰ *Availability:* {{period}}",
+    "composedPreference": "🚗 *Preference:* {{transmission}}",
+    "composedClosing": "I would like to know package prices and open dates on your schedule!",
+    "buttonText": "Send Request Directly via WhatsApp"
+  },
+  "about": {
+    "badge": "Meet Your Instructor",
+    "title": "Over two decades helping people gain independence on the road",
+    "text1": "Hello! I am Instructor Hélvio. I work in training and refining drivers in Sapiranga/RS and throughout the Vale do Sinos region. Over more than 25 years in the profession, I've realized that the main challenge for learners is not mechanical, but rather the pressure and anxiety caused by impatient teaching methods.",
+    "text2": "That's why I created a humanized, progressive, and welcoming approach. Whether it's overcoming fear on highways and local hills, mastering perfect parallel parking, or passing the Detran/RS test on your first try, my commitment is to guide you safely step-by-step.",
+    "quote": "Driving is not an exclusive gift for a few: it is a skill anyone can build with the right guidance and in good time.",
+    "credentialBadge": "Active DETRAN/RS Certification",
+    "subtitleRole": "Specialist in Humanized Teaching & Driving Phobia",
+    "locationRole": "Sapiranga • Vale do Sinos / RS",
+    "commitmentLabel": "Ethical Commitment",
+    "legalBadgeTitle": "100% Certified",
+    "legalBadgeSub": "Detran/RS & CTB Standards",
+    "cardHighlights": [
+      {
+        "icon": "fa-solid fa-brain",
+        "title": "Emotional Control & Anxiety",
+        "description": "Breathing and focus techniques to remain calm in traffic and during practical exams."
+      },
+      {
+        "icon": "fa-solid fa-car",
+        "title": "Defensive Driving in Practice",
+        "description": "Risk anticipation so you drive with total safety across regional streets and highways."
+      }
+    ],
+    "buttonText": "Talk to Instructor Hélvio",
+    "whatsappMessage": "Hello, Instructor Hélvio! I read about your teaching method and would like to chat about practical lessons."
+  },
+  "testimonials": {
+    "badge": "Real Reviews",
+    "title": "Stories of people who overcame fear and earned their license",
+    "subtitle": "Read reviews from students who faced the same insecurities in Sapiranga and region and now drive freely.",
+    "items": [
+      {
+        "name": "Mariana R.",
+        "initials": "MR",
+        "tag": "Licensed 8 years ago",
+        "tagColor": "bg-emerald-100 text-emerald-800",
+        "service": "Licensed Driver Training • Sapiranga",
+        "rating": 5,
+        "review": "My license was hidden in a drawer for 8 years out of panic. Just sitting in the driver's seat made my heart race. With Hélvio, we did lessons focused on my route from Sapiranga to Novo Hamburgo via RS-239. His calmness was everything! Today I commute confidently."
+      },
+      {
+        "name": "Lucas Santos",
+        "initials": "LS",
+        "tag": "Detran/RS Passed",
+        "tagColor": "bg-amber-100 text-amber-800",
+        "service": "Practical Test Reinforcement • Vale do Sinos",
+        "rating": 5,
+        "review": "I had failed parallel parking twice on the Detran exam. I took reinforcement lessons with Hélvio and he taught me very simple visual reference points. The mock exam was identical to the real test. Passed first try with zero point deductions!"
+      },
+      {
+        "name": "Cláudia Albuquerque",
+        "initials": "CA",
+        "tag": "1st License",
+        "tagColor": "bg-blue-100 text-blue-800",
+        "service": "1st License from Scratch • Campo Bom / Sapiranga",
+        "rating": 5,
+        "review": "I had never started a car in my life and I get extremely anxious. Hélvio explained every detail without raising his voice or complaining. He conveys unbelievable confidence. Highly recommended for anyone afraid of stressed instructors!"
+      }
+    ],
+    "googleRatingText": "4.9 out of 5.0 rating from satisfied students",
+    "trainedCountText": "+500 drivers prepared in Sapiranga and region"
+  },
+  "faq": {
+    "badge": "Have Questions?",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know before booking your first practical lesson in Sapiranga and region.",
+    "items": [
+      {
+        "question": "I'm terrified of driving or freeze up thinking about hills and highways. Will this method work for me?",
+        "answer": "Yes! Training for licensed drivers is designed specifically for people facing emotional blocks and anxiety behind the wheel. We start on very quiet streets in Sapiranga and advance at your pace, until you master hill starts and drive safely on highways."
+      },
+      {
+        "question": "Are lessons conducted in the driving school car or my own car?",
+        "answer": "You can choose! If you are still feeling unconfident, we start in our official vehicle equipped with dual controls (safety pedals on the instructor's side). Once you feel ready, we can transition to your own car so you get used to your daily routine."
+      },
+      {
+        "question": "How does reinforcement work for students taking the Detran/RS practical exam?",
+        "answer": "We focus 100% on criteria evaluated by the Detran/RS examination board: official test route, precision parallel parking with easy references, smooth clutch control without jerks, and timed realistic mock tests."
+      },
+      {
+        "question": "How many lessons do I need to take?",
+        "answer": "It depends on your goal and current confidence level. In the first lesson, we perform a practical assessment. For Detran reinforcement, 5 to 8 lessons are usually enough. For students with severe driving anxiety, 10 or more lessons ensure solid and lasting progress."
+      },
+      {
+        "question": "Which cities do you serve besides Sapiranga?",
+        "answer": "We serve Sapiranga, Campo Bom, Novo Hamburgo, Nova Hartz, Araricá, Taquara, and neighboring towns in Vale do Sinos. We arrange the starting point according to your convenience."
+      },
+      {
+        "question": "What payment methods are accepted?",
+        "answer": "We accept Cash (with special conditions), Pix, and Credit Card with easy installment plans for lesson packages."
+      }
+    ]
+  },
+  "cta": {
+    "urgencyBadge": "Limited Weekly Slots in Sapiranga and Region",
+    "titleMain": "Ready to take the wheel and conquer your",
+    "titleHighlight": "freedom",
+    "subtitle": "Don't delay your dream of driving any longer. Send a message on WhatsApp right now to ask questions, check availability, and secure your practical lesson in Sapiranga and neighboring cities.",
+    "buttonText": "Talk Directly to Instructor Hélvio",
+    "guaranteeText": "Direct contact with no middleman • Fast response on WhatsApp",
+    "whatsappMessage": "Hello, Instructor Hélvio! I would like to schedule my practical lessons in Sapiranga/region.",
+    "phoneLabel": "Phone & WhatsApp",
+    "regionsLabel": "Areas Covered",
+    "hoursLabel": "Lesson Hours",
+    "instagramFollow": "Follow on Instagram:"
+  },
+  "footer": {
+    "brandDescription": "Specialized practical driving instruction for 1st License, Detran/RS exam reinforcement, and overcoming driving anxiety in real-world traffic in Sapiranga and region.",
+    "serving": "Serving:",
+    "quickNav": "Quick Navigation",
+    "legalTitle": "Legal Notice & DETRAN",
+    "legalDisclaimer": "Activity carried out in full compliance with the Brazilian Traffic Code (Law No. 9.503/1997) and CONTRAN/DETRAN-RS resolutions for driver training and qualification.",
+    "rights": "Instructor Hélvio - All rights reserved.",
+    "tagline": "Personalized and humanized driving instruction."
+  },
+  "toast": {
+    "notifLabel": "Notification of recent bookings",
+    "closeNotif": "Close notification",
+    "activities": [
+      "👏 <strong>Mariana F. (Sapiranga)</strong> scheduled training for licensed drivers 8 min ago.",
+      "🚗 <strong>Lucas R. (Novo Hamburgo)</strong> secured Detran test reinforcement 15 min ago.",
+      "🎉 <strong>Carla M. (Campo Bom)</strong> passed the Detran/RS practical exam today!",
+      "🌟 <strong>Rodrigo S. (Sapiranga)</strong> booked Saturday morning slot.",
+      "🔑 <strong>Patricia T. (Nova Hartz)</strong> conquered highway driving fear on RS-239!"
+    ]
+  },
+  "floatingWhatsApp": {
+    "tooltip": "Sapiranga and Region: Talk to me on WhatsApp!",
+    "ariaLabel": "Open WhatsApp conversation with Instructor Hélvio"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "ptBR": "Português",
+    "en": "English"
+  }
+}

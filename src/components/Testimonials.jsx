@@ -1,8 +1,9 @@
 import React from 'react';
-import { SITE_CONTENT } from '../data/content';
+import { useTranslation } from 'react-i18next';
 
 export default function Testimonials() {
-  const { testimonials } = SITE_CONTENT;
+  const { t } = useTranslation();
+  const items = t('testimonials.items', { returnObjects: true }) || [];
 
   return (
     <section id="depoimentos" className="py-20 bg-white border-b border-slate-200/60">
@@ -11,19 +12,19 @@ export default function Testimonials() {
         {/* Cabeçalho */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
-            <i className="fa-solid fa-star text-amber-500"></i> {testimonials.badge}
+            <i className="fa-solid fa-star text-amber-500"></i> {t('testimonials.badge')}
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight">
-            {testimonials.title}
+            {t('testimonials.title')}
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            {testimonials.subtitle}
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
         {/* Grid de Depoimentos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.items.map((item, idx) => (
+          {Array.isArray(items) && items.map((item, idx) => (
             <div
               key={idx}
               className="p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-soft"
@@ -61,9 +62,9 @@ export default function Testimonials() {
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-100 border border-slate-200 text-xs sm:text-sm text-slate-700">
             <i className="fa-brands fa-google text-red-500 text-base"></i>
-            <span><strong>{testimonials.googleRatingText}</strong></span>
+            <span><strong>{t('testimonials.googleRatingText')}</strong></span>
             <span className="text-slate-300">|</span>
-            <span className="text-brand-700 font-semibold">{testimonials.trainedCountText}</span>
+            <span className="text-brand-700 font-semibold">{t('testimonials.trainedCountText')}</span>
           </div>
         </div>
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import { SITE_CONTENT } from '../data/content';
+import { useTranslation } from 'react-i18next';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Services() {
-  const { services } = SITE_CONTENT;
-
-  const bannerWhatsAppUrl = getWhatsAppUrl(services.banner.whatsappMessage);
+  const { t } = useTranslation();
+  const items = t('services.items', { returnObjects: true }) || [];
+  const bannerWhatsAppUrl = getWhatsAppUrl(t('services.banner.whatsappMessage'));
 
   return (
     <section id="servicos" className="py-20 bg-slate-50">
@@ -14,19 +14,19 @@ export default function Services() {
         {/* Header da Seção */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
-            <i className="fa-solid fa-list-check"></i> {services.badge}
+            <i className="fa-solid fa-list-check"></i> {t('services.badge')}
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight">
-            {services.title}
+            {t('services.title')}
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            {services.subtitle}
+            {t('services.subtitle')}
           </p>
         </div>
 
         {/* Grid de Serviços */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.items.map((item) => {
+          {Array.isArray(items) && items.map((item) => {
             const itemWhatsAppUrl = getWhatsAppUrl(item.whatsappMessage);
 
             return (
@@ -65,7 +65,7 @@ export default function Services() {
                   </p>
 
                   <ul className="space-y-2.5 pt-2 border-t border-slate-100 text-xs sm:text-sm text-slate-700">
-                    {item.bullets.map((bullet, bIdx) => (
+                    {Array.isArray(item.bullets) && item.bullets.map((bullet, bIdx) => (
                       <li key={bIdx} className="flex items-start gap-2.5">
                         <i className="fa-solid fa-check text-brand-600 font-bold mt-1"></i>
                         <span>{bullet}</span>
@@ -96,10 +96,10 @@ export default function Services() {
         <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-brand-900 to-navy-900 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <span className="inline-block px-3 py-1 rounded-full bg-brand-500/30 text-brand-300 text-xs font-bold uppercase">
-              {services.banner.tag}
+              {t('services.banner.tag')}
             </span>
-            <h4 className="font-heading text-xl sm:text-2xl font-bold">{services.banner.title}</h4>
-            <p className="text-sm text-slate-300 max-w-xl">{services.banner.description}</p>
+            <h4 className="font-heading text-xl sm:text-2xl font-bold">{t('services.banner.title')}</h4>
+            <p className="text-sm text-slate-300 max-w-xl">{t('services.banner.description')}</p>
           </div>
           <a
             href={bannerWhatsAppUrl}
@@ -108,7 +108,7 @@ export default function Services() {
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white text-navy-900 hover:bg-slate-100 font-bold text-sm shadow-lg whitespace-nowrap transition hover:scale-105 active:scale-95"
           >
             <i className="fa-brands fa-whatsapp text-brand-600 text-lg"></i>
-            <span>{services.banner.buttonText}</span>
+            <span>{t('services.banner.buttonText')}</span>
           </a>
         </div>
 

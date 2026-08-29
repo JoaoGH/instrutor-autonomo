@@ -1,4 +1,5 @@
-import { SITE_CONTENT } from '../data/content';
+import i18n from '../i18n';
+import { CONTACT_INFO } from '../data/content';
 
 /**
  * Retorna a URL formatada do WhatsApp com a mensagem codificada
@@ -6,7 +7,7 @@ import { SITE_CONTENT } from '../data/content';
  * @returns {string} - Link pronto para https://wa.me/...
  */
 export function getWhatsAppUrl(customMessage) {
-  const message = customMessage || SITE_CONTENT.contact.defaultMessage;
+  const message = customMessage || i18n.t('contact.defaultMessage');
   const encodedText = encodeURIComponent(message);
-  return `https://wa.me/${SITE_CONTENT.contact.whatsappNumber}?text=${encodedText}`;
+  return `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodedText}`;
 }
