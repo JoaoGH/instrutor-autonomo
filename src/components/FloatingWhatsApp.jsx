@@ -19,7 +19,7 @@ export default function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('floatingWhatsApp.ariaLabel')}
-        className="animate-pulse-whatsapp relative w-16 h-16 rounded-full bg-[#25d366] hover:bg-[#1ebd5b] text-white flex items-center justify-center text-3xl shadow-2xl transition hover:scale-110 active:scale-95"
+        className="animate-pulse-whatsapp relative w-16 h-16 rounded-full bg-whatsapp-500 hover:bg-whatsapp-600 text-white flex items-center justify-center text-3xl shadow-2xl transition hover:scale-110 active:scale-95"
       >
         <i className="fa-brands fa-whatsapp"></i>
 
