@@ -9,7 +9,7 @@ export default function Announcement() {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center justify-center w-2 h-2 rounded-full bg-brand-400 animate-pulse-dot"></span>
-          <span className="font-medium text-emerald-300">{t('announcement.badge')}:</span>
+          <span className="font-medium text-brand-300">{t('announcement.badge')}:</span>
           <span>{t('announcement.text')}</span>
         </div>
         <div className="flex items-center gap-4 text-xs">

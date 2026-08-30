@@ -38,7 +38,7 @@ export default function About() {
                     <p className="text-xs font-semibold text-slate-200">
                       {t('about.subtitleRole')}
                     </p>
-                    <p className="text-[11px] text-emerald-400 font-bold mt-0.5">
+                    <p className="text-[11px] text-brand-300 font-bold mt-0.5">
                       {t('about.locationRole')}
                     </p>
                   </div>
@@ -54,7 +54,7 @@ export default function About() {
 
               {/* Badge Flutuante de Credencial */}
               <div className="absolute -bottom-8 right-4 sm:right-6 bg-white py-3 px-5 rounded-2xl shadow-xl border border-slate-200 flex items-center gap-3 z-20">
-                <div className="w-10 h-10 rounded-full bg-emerald-100 text-brand-700 flex items-center justify-center font-bold">
+                <div className="w-10 h-10 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold">
                   <i className="fa-solid fa-shield-check text-xl"></i>
                 </div>
                 <div>
@@ -105,7 +105,7 @@ export default function About() {
                 href={aboutWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-whatsapp-700 hover:bg-whatsapp-800 text-white font-bold text-sm shadow-md hover:shadow-lg transition"
               >
                 <i className="fa-brands fa-whatsapp text-lg"></i>
                 <span>{t('about.buttonText')}</span>

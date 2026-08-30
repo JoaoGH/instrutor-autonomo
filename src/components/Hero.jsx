@@ -24,7 +24,7 @@ export default function Hero() {
           {/* Coluna Esquerda: Texto de Impacto & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             {/* Badge de Autoridade */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-300 text-emerald-800 text-xs sm:text-sm font-bold shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-100/80 border border-brand-300 text-brand-800 text-xs sm:text-sm font-bold shadow-sm">
               <i className="fa-solid fa-award text-brand-600"></i>
               <span>{t('hero.badge')}</span>
             </div>
@@ -32,7 +32,7 @@ export default function Hero() {
             {/* Título Principal (H1) */}
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-navy-900 tracking-tight leading-[1.12]">
               {t('hero.titleMain')}{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 via-brand-600 to-brand-500">
                 {t('hero.titleHighlight')}
               </span>
             </h1>
@@ -48,7 +48,7 @@ export default function Hero() {
                 href={heroWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="animate-pulse-whatsapp inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-lg shadow-xl shadow-brand-600/30 transition-all hover:scale-105 active:scale-95"
+                className="animate-pulse-whatsapp inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-whatsapp-700 hover:bg-whatsapp-800 text-white font-extrabold text-lg shadow-xl shadow-brand-600/30 transition-all hover:scale-105 active:scale-95"
               >
                 <i className="fa-brands fa-whatsapp text-2xl"></i>
                 <span>{t('hero.ctaPrimary')}</span>
@@ -85,7 +85,7 @@ export default function Hero() {
               <div className="flex items-center justify-between pb-4 mb-5 border-b border-slate-100">
                 <div className="flex items-center gap-2.5">
                   <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
                   </span>
                   <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
@@ -143,7 +143,7 @@ export default function Hero() {
                   href={cardWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-brand-600 to-emerald-600 hover:from-brand-700 hover:to-emerald-700 text-white font-bold text-sm shadow-lg shadow-brand-600/25 transition"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white font-bold text-sm shadow-lg shadow-brand-600/25 transition"
                 >
                   <i className="fa-brands fa-whatsapp text-lg"></i>
                   <span>{t('hero.card.buttonText')}</span>

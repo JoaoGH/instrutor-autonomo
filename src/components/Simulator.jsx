@@ -164,8 +164,8 @@ export default function Simulator() {
             </div>
 
             {/* Preview da Mensagem Gerada */}
-            <div className="p-4 rounded-2xl bg-emerald-900/5 border border-emerald-200">
-              <span className="block text-[11px] font-bold text-emerald-800 uppercase tracking-wider mb-1">
+            <div className="p-4 rounded-2xl bg-brand-900/5 border border-brand-200">
+              <span className="block text-[11px] font-bold text-brand-800 uppercase tracking-wider mb-1">
                 <i className="fa-brands fa-whatsapp text-brand-600 mr-1"></i>{' '}
                 {t('simulator.previewLabel')}
               </span>
@@ -180,7 +180,7 @@ export default function Simulator() {
                 href={dynamicWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-base sm:text-lg shadow-xl shadow-brand-600/30 transition hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 rounded-2xl bg-whatsapp-700 hover:bg-whatsapp-800 text-white font-extrabold text-base sm:text-lg shadow-xl shadow-brand-600/30 transition hover:scale-105 active:scale-95"
               >
                 <i className="fa-brands fa-whatsapp text-2xl"></i>
                 <span>{t('simulator.buttonText')}</span>

@@ -98,7 +98,7 @@ export default function Header() {
               href={headerWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md hover:shadow-lg shadow-brand-600/25 transition-all hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-whatsapp-700 hover:bg-whatsapp-800 text-white font-bold text-sm shadow-md hover:shadow-lg shadow-brand-600/25 transition-all hover:scale-105 active:scale-95"
             >
               <i className="fa-brands fa-whatsapp text-lg"></i>
               <span>{t('nav.scheduleBtn')}</span>
@@ -177,7 +177,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMobileMenu}
-              className="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl bg-brand-600 text-white font-bold text-base shadow-lg shadow-brand-600/30"
+              className="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl bg-whatsapp-700 text-white font-bold text-base shadow-lg shadow-brand-600/30"
             >
               <i className="fa-brands fa-whatsapp text-xl"></i>
               <span>{t('nav.scheduleBtnMobile')}</span>

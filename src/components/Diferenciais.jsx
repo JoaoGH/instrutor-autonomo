@@ -24,7 +24,7 @@ export default function Diferenciais() {
             items.map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-3 hover:bg-emerald-50/50 hover:border-brand-300 transition"
+                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-3 hover:bg-brand-50/50 hover:border-brand-300 transition"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl">
                   <i className={item.icon}></i>

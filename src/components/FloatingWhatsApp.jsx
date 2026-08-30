@@ -24,7 +24,7 @@ export default function FloatingWhatsApp() {
         <i className="fa-brands fa-whatsapp"></i>
 
         {/* Ponto de status Online */}
-        <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-emerald-300 border-2 border-white"></span>
+        <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-whatsapp-500 border-2 border-white"></span>
       </a>
     </div>
   );
