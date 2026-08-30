@@ -66,17 +66,6 @@ export default function Hero() {
             {/* Prova Social Imediata (Mini Badges) */}
             <div className="pt-6 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-8 text-slate-600 text-xs sm:text-sm">
               <div className="flex items-center gap-2">
-                <div className="flex text-accent-amber text-xs">
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                </div>
-                <span className="font-bold text-slate-800">{t('hero.socialProof')}</span>
-              </div>
-
-              <div className="flex items-center gap-2">
                 <i className="fa-solid fa-car-side text-brand-600"></i>
                 <span className="font-medium">{t('hero.feature1')}</span>
               </div>

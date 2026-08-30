@@ -60,11 +60,6 @@ export default function Testimonials() {
         {/* Selo de Avaliações Google */}
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-100 border border-slate-200 text-xs sm:text-sm text-slate-700">
-            <i className="fa-brands fa-google text-red-500 text-base"></i>
-            <span>
-              <strong>{t('testimonials.googleRatingText')}</strong>
-            </span>
-            <span className="text-slate-300">|</span>
             <span className="text-brand-700 font-semibold">
               {t('testimonials.trainedCountText')}
             </span>
