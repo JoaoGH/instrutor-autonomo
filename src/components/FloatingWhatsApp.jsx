@@ -19,12 +19,12 @@ export default function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('floatingWhatsApp.ariaLabel')}
-        className="animate-pulse-whatsapp relative w-16 h-16 rounded-full bg-[#25d366] hover:bg-[#1ebd5b] text-white flex items-center justify-center text-3xl shadow-2xl transition hover:scale-110 active:scale-95"
+        className="animate-pulse-whatsapp relative w-16 h-16 rounded-full bg-whatsapp-500 hover:bg-whatsapp-600 text-white flex items-center justify-center text-3xl shadow-2xl transition hover:scale-110 active:scale-95"
       >
         <i className="fa-brands fa-whatsapp"></i>
 
         {/* Ponto de status Online */}
-        <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-emerald-300 border-2 border-white"></span>
+        <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-whatsapp-500 border-2 border-white"></span>
       </a>
     </div>
   );

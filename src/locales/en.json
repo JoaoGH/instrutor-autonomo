@@ -38,7 +38,6 @@
     "subtitle": "Personalized practical lessons for those getting their 1st license, needing focused reinforcement for the Detran/RS practical exam, or wanting to overcome driving fear in real traffic. Learn without stress, at your pace, with true patience.",
     "ctaPrimary": "Schedule your Lesson via WhatsApp",
     "ctaSecondary": "View Services and Packages",
-    "socialProof": "4.9/5 (+500 passed students)",
     "feature1": "Dual-control car with A/C",
     "feature2": "Flexible Schedules",
     "floatingBadge1": {
@@ -238,7 +237,7 @@
         "name": "Mariana R.",
         "initials": "MR",
         "tag": "Licensed 8 years ago",
-        "tagColor": "bg-emerald-100 text-emerald-800",
+        "tagColor": "bg-brand-100 text-brand-800",
         "service": "Licensed Driver Training • Sapiranga",
         "rating": 5,
         "review": "My license was hidden in a drawer for 8 years out of panic. Just sitting in the driver's seat made my heart race. With Hélvio, we did lessons focused on my route from Sapiranga to Novo Hamburgo via RS-239. His calmness was everything! Today I commute confidently."
@@ -262,7 +261,6 @@
         "review": "I had never started a car in my life and I get extremely anxious. Hélvio explained every detail without raising his voice or complaining. He conveys unbelievable confidence. Highly recommended for anyone afraid of stressed instructors!"
       }
     ],
-    "googleRatingText": "4.9 out of 5.0 rating from satisfied students",
     "trainedCountText": "+500 drivers prepared in Sapiranga and region"
   },
   "faq": {

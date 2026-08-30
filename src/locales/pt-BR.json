@@ -38,7 +38,6 @@
     "subtitle": "Aulas práticas personalizadas para quem vai tirar a 1ª Habilitação, precisa de reforço focado para o exame prático do Detran/RS ou quer vencer o medo de dirigir (perde-medo) no trânsito real. Aprenda sem broncas, no seu ritmo e com quem tem paciência de verdade.",
     "ctaPrimary": "Agende sua Aula pelo WhatsApp",
     "ctaSecondary": "Ver Serviços e Pacotes",
-    "socialProof": "4.9/5 (+500 alunos aprovados)",
     "feature1": "Carro com Duplo Comando & Ar",
     "feature2": "Horários Flexíveis",
     "floatingBadge1": {
@@ -238,7 +237,7 @@
         "name": "Mariana R.",
         "initials": "MR",
         "tag": "Habilitada há 8 anos",
-        "tagColor": "bg-emerald-100 text-emerald-800",
+        "tagColor": "bg-brand-100 text-brand-800",
         "service": "Treinamento para Habilitados • Sapiranga",
         "rating": 5,
         "review": "Minha CNH estava guardada na gaveta há 8 anos por puro pânico. Bastava sentar no banco do motorista para o coração disparar. Com o Hélvio fiz aulas focadas no meu trajeto de Sapiranga para Novo Hamburgo pela RS-239. A calma dele foi tudo! Hoje vou e volto dirigindo tranquilamente."
@@ -262,7 +261,6 @@
         "review": "Nunca tinha ligado um carro na vida e sou extremamente ansiosa. O Hélvio explicou cada detalhe sem nunca levantar a voz ou reclamar. Ele transmite uma segurança surreal. Recomendo de olhos fechados para quem tem medo de instrutor estressado!"
       }
     ],
-    "googleRatingText": "Nota 4.9 de 5.0 nas avaliações de alunos satisfeitos",
     "trainedCountText": "+500 motoristas preparados em Sapiranga e região"
   },
   "faq": {

@@ -109,7 +109,7 @@ export default function Services() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white text-navy-900 hover:bg-slate-100 font-bold text-sm shadow-lg whitespace-nowrap transition hover:scale-105 active:scale-95"
           >
-            <i className="fa-brands fa-whatsapp text-brand-600 text-lg"></i>
+            <i className="fa-brands fa-whatsapp text-whatsapp-700 text-lg"></i>
             <span>{t('services.banner.buttonText')}</span>
           </a>
         </div>

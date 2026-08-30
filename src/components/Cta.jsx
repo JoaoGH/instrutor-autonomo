@@ -10,8 +10,8 @@ export default function Cta() {
   return (
     <section id="contato" className="py-20 cta-gradient-bg text-white relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-navy-900/90 border border-emerald-500/30 rounded-3xl p-8 sm:p-12 lg:p-14 shadow-2xl backdrop-blur-md text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs sm:text-sm font-bold shadow-inner">
+        <div className="bg-navy-900/90 border border-brand-500/30 rounded-3xl p-8 sm:p-12 lg:p-14 shadow-2xl backdrop-blur-md text-center space-y-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/20 border border-brand-400/40 text-brand-300 text-xs sm:text-sm font-bold shadow-inner">
             <i className="fa-solid fa-calendar-check text-brand-400"></i>
             <span>{t('cta.urgencyBadge')}</span>
           </div>
@@ -31,7 +31,7 @@ export default function Cta() {
               href={ctaWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-pulse-whatsapp inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-5 rounded-2xl bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-lg sm:text-xl shadow-2xl shadow-brand-500/40 transition-all hover:scale-105 active:scale-95"
+              className="animate-pulse-whatsapp inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-5 rounded-2xl bg-whatsapp-700 hover:bg-whatsapp-800 text-white font-extrabold text-lg sm:text-xl shadow-2xl shadow-brand-500/40 transition-all hover:scale-105 active:scale-95"
             >
               <i className="fa-brands fa-whatsapp text-3xl"></i>
               <span>{t('cta.buttonText')}</span>

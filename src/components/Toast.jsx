@@ -51,7 +51,7 @@ export default function Toast() {
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0 pointer-events-none'
       }`}
     >
-      <div className="w-10 h-10 rounded-xl bg-emerald-100 text-brand-700 flex items-center justify-center text-lg flex-shrink-0">
+      <div className="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-lg flex-shrink-0">
         <i className="fa-solid fa-car-side"></i>
       </div>
       <div
