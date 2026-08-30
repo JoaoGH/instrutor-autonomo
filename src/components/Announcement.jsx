@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { CONTACT_INFO } from '../data/content';
 
@@ -15,7 +14,8 @@ export default function Announcement() {
         </div>
         <div className="flex items-center gap-4 text-xs">
           <span className="hidden md:inline-flex items-center gap-1.5 text-slate-300">
-            <i className="fa-solid fa-shield-halved text-brand-400"></i> {t('announcement.detranBadge')}
+            <i className="fa-solid fa-shield-halved text-brand-400"></i>{' '}
+            {t('announcement.detranBadge')}
           </span>
           <a
             href={`tel:${CONTACT_INFO.phoneTel}`}

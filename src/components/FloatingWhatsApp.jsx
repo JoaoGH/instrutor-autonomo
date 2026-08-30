@@ -1,13 +1,10 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export default function FloatingWhatsApp() {
   const { t } = useTranslation();
 
-  const floatingWhatsAppUrl = getWhatsAppUrl(
-    t('contact.defaultMessage')
-  );
+  const floatingWhatsAppUrl = getWhatsAppUrl(t('contact.defaultMessage'));
 
   return (
     <div className="whatsapp-float-container fixed bottom-6 right-6 z-50 flex items-center gap-3">
@@ -25,7 +22,7 @@ export default function FloatingWhatsApp() {
         className="animate-pulse-whatsapp relative w-16 h-16 rounded-full bg-[#25d366] hover:bg-[#1ebd5b] text-white flex items-center justify-center text-3xl shadow-2xl transition hover:scale-110 active:scale-95"
       >
         <i className="fa-brands fa-whatsapp"></i>
-        
+
         {/* Ponto de status Online */}
         <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-emerald-300 border-2 border-white"></span>
       </a>

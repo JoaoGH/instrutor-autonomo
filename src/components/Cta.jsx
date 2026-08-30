@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { CONTACT_INFO } from '../data/content';
 import { getWhatsAppUrl } from '../utils/whatsapp';
@@ -11,9 +10,7 @@ export default function Cta() {
   return (
     <section id="contato" className="py-20 cta-gradient-bg text-white relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
         <div className="bg-navy-900/90 border border-emerald-500/30 rounded-3xl p-8 sm:p-12 lg:p-14 shadow-2xl backdrop-blur-md text-center space-y-8">
-          
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs sm:text-sm font-bold shadow-inner">
             <i className="fa-solid fa-calendar-check text-brand-400"></i>
             <span>{t('cta.urgencyBadge')}</span>
@@ -21,7 +18,8 @@ export default function Cta() {
 
           <div className="space-y-4 max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-              {t('cta.titleMain')} <span className="text-brand-400">{t('cta.titleHighlight')}</span>?
+              {t('cta.titleMain')} <span className="text-brand-400">{t('cta.titleHighlight')}</span>
+              ?
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
               {t('cta.subtitle')}
@@ -81,9 +79,7 @@ export default function Cta() {
               <span>{CONTACT_INFO.instagramHandle}</span>
             </a>
           </div>
-
         </div>
-
       </div>
     </section>
   );
