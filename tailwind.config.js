@@ -27,7 +27,6 @@ export default {
           950: '#020617',
         },
         whatsapp: {
-          DEFAULT: '#25d366',
           500: '#25d366',
           600: '#1ebd5b',
         },
