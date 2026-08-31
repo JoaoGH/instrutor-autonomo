@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { TOAST_ACTIVITIES } from '../data/content.js';
 
 export default function Toast() {
   const { t } = useTranslation();
@@ -15,26 +16,24 @@ export default function Toast() {
   useEffect(() => {
     if (activitiesLength === 0 || isDismissed) return;
 
-    // Primeiro toast após 4s
     const initialTimer = setTimeout(() => {
       setIsVisible(true);
 
       const hideTimer = setTimeout(() => {
         setIsVisible(false);
-      }, 6000);
+      }, TOAST_ACTIVITIES.tempoVisivelToast);
 
       return () => clearTimeout(hideTimer);
-    }, 4000);
+    }, TOAST_ACTIVITIES.tempoPrimeiroToast);
 
-    // Ciclo de novos toasts a cada 24s
     const intervalTimer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % activitiesLength);
       setIsVisible(true);
 
       setTimeout(() => {
         setIsVisible(false);
-      }, 6000);
-    }, 24000);
+      }, TOAST_ACTIVITIES.tempoVisivelToast);
+    }, TOAST_ACTIVITIES.intervaloEntreToasts);
 
     return () => {
       clearTimeout(initialTimer);

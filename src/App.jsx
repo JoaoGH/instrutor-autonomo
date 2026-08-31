@@ -12,6 +12,7 @@ import Cta from './components/Cta';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Toast from './components/Toast';
+import { TOAST_ACTIVITIES } from './data/content.js';
 
 export default function App() {
   return (
@@ -58,7 +59,7 @@ export default function App() {
       <FloatingWhatsApp />
 
       {/* 14. Toast Notificação de Prova Social */}
-      <Toast />
+      {TOAST_ACTIVITIES.isActive && <Toast />}
     </div>
   );
 }

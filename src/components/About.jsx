@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import heroImg from '../assets/images/hero.webp';
+import { CONTACT_INFO } from '../data/content.js';
 
 export default function About() {
   const { t } = useTranslation();
@@ -55,7 +56,7 @@ export default function About() {
               {/* Badge Flutuante de Credencial */}
               <div className="absolute -bottom-8 right-4 sm:right-6 bg-white py-3 px-5 rounded-2xl shadow-xl border border-slate-200 flex items-center gap-3 z-20">
                 <div className="w-10 h-10 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold">
-                  <i className="fa-solid fa-shield-check text-xl"></i>
+                  <i className="fa-solid fa-building-shield text-xl"></i>
                 </div>
                 <div>
                   <span className="block text-xs font-bold text-navy-900">
@@ -100,7 +101,7 @@ export default function About() {
                 ))}
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4 flex flex-wrap items-center gap-3">
               <a
                 href={aboutWhatsAppUrl}
                 target="_blank"
@@ -109,6 +110,15 @@ export default function About() {
               >
                 <i className="fa-brands fa-whatsapp text-lg"></i>
                 <span>{t('about.buttonText')}</span>
+              </a>
+              <a
+                href={CONTACT_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition"
+              >
+                <i className="fa-brands fa-instagram text-lg"></i>
+                <span>{t('about.instagram')}</span>
               </a>
             </div>
           </div>

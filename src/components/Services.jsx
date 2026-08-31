@@ -77,7 +77,7 @@ export default function Services() {
                       href={itemWhatsAppUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm ${
+                      className={`flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-whatsapp-700 hover:bg-whatsapp-800 text-white font-bold text-sm ${
                         item.isPopular
                           ? 'shadow-lg shadow-brand-600/30'
                           : 'shadow-md hover:shadow-lg'
