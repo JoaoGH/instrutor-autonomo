@@ -57,6 +57,8 @@
       "checks": [
         { "strong": "Baliza sem complicação:", "text": " Macetes visuais simples para você estacionar de primeira." },
         { "strong": "Domínio da embreagem:", "text": " Nunca mais deixe o carro morrer em subidas e ladeiras." },
+        { "strong": "Sem bloqueios:", "text": " Didática focada na superação de bloqueios e confiança na direção prática do dia a dia." },
+        { "strong": "Paciência Absoluta:", "text": " Especialista em alunos ansiosos" },
         { "strong": "No seu carro ou no nosso:", "text": " Aulas práticas no veículo com duplo comando ou no seu próprio carro." }
       ],
       "buttonText": "Tirar Dúvidas no WhatsApp"
@@ -66,7 +68,7 @@
   },
   "metrics": [
     { "number": "+25 Anos", "label": "De Experiência no Ensino Prático" },
-    { "number": "+500", "label": "Alunos Aprovados" },
+    { "number": "+6000", "label": "Alunos Aprovados" },
     { "number": "98%", "label": "Índice de Aprovação Prática Detran/RS" },
     { "number": "100%", "label": "Atenção e Didática Individualizada" }
   ],
