@@ -100,7 +100,7 @@ export default function About() {
                 ))}
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4 flex flex-wrap items-center gap-3">
               <a
                 href={aboutWhatsAppUrl}
                 target="_blank"
@@ -109,6 +109,15 @@ export default function About() {
               >
                 <i className="fa-brands fa-whatsapp text-lg"></i>
                 <span>{t('about.buttonText')}</span>
+              </a>
+              <a
+                  href="https://instagram.com/instrutor.helvio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition"
+              >
+                <i className="fa-brands fa-instagram text-lg"></i>
+                <span>{t('about.instagram')}</span>
               </a>
             </div>
           </div>
