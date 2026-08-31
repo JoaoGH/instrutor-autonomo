@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import logoImg from '../assets/images/logo.webp';
 
 export default function Header() {
   const { t } = useTranslation();
@@ -38,9 +39,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3 group" onClick={closeMobileMenu}>
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
-              <i className="fa-solid fa-car-side text-2xl"></i>
-            </div>
+            <img
+              src={logoImg}
+              alt={t('contact.instructorName')}
+              className="w-12 h-12 rounded-2xl object-cover shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform"
+            />
             <div>
               <span className="font-heading font-extrabold text-xl sm:text-2xl text-navy-900 tracking-tight block leading-tight">
                 Instrutor <span className="text-brand-600">Hélvio</span>
