@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import logoImg from '../assets/images/logo.webp';
 
@@ -94,9 +93,8 @@ export default function Header() {
             </a>
           </nav>
 
-          {/* CTA Header Button & Language Switcher */}
+          {/* CTA Header Button */}
           <div className="hidden sm:flex items-center gap-4">
-            <LanguageSwitcher />
             <a
               href={headerWhatsAppUrl}
               target="_blank"
@@ -108,9 +106,8 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Toggle Button & Switcher */}
+          {/* Mobile Menu Toggle Button */}
           <div className="flex lg:hidden items-center gap-2">
-            <LanguageSwitcher />
             <button
               onClick={toggleMobileMenu}
               type="button"
