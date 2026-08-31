@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="space-y-3 md:col-span-2">
             <div className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white font-bold">
-                <i className="fa-solid fa-steering-wheel"></i>
+                <i className="fa-solid fa-car-side text-xl"></i>
               </div>
               <span className="font-heading font-extrabold text-lg text-white">
                 {t('contact.instructorName')}
