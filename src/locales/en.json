@@ -232,35 +232,17 @@
     "badge": "Real Reviews",
     "title": "Stories of people who overcame fear and earned their license",
     "subtitle": "Read reviews from students who faced the same insecurities in Sapiranga and region and now drive freely.",
-    "items": [
-      {
-        "name": "Mariana R.",
-        "initials": "MR",
-        "tag": "Licensed 8 years ago",
-        "tagColor": "bg-brand-100 text-brand-800",
-        "service": "Licensed Driver Training • Sapiranga",
-        "rating": 5,
-        "review": "My license was hidden in a drawer for 8 years out of panic. Just sitting in the driver's seat made my heart race. With Hélvio, we did lessons focused on my route from Sapiranga to Novo Hamburgo via RS-239. His calmness was everything! Today I commute confidently."
-      },
-      {
-        "name": "Lucas Santos",
-        "initials": "LS",
-        "tag": "Detran/RS Passed",
-        "tagColor": "bg-amber-100 text-amber-800",
-        "service": "Practical Test Reinforcement • Vale do Sinos",
-        "rating": 5,
-        "review": "I had failed parallel parking twice on the Detran exam. I took reinforcement lessons with Hélvio and he taught me very simple visual reference points. The mock exam was identical to the real test. Passed first try with zero point deductions!"
-      },
-      {
-        "name": "Cláudia Albuquerque",
-        "initials": "CA",
-        "tag": "1st License",
-        "tagColor": "bg-blue-100 text-blue-800",
-        "service": "1st License from Scratch • Campo Bom / Sapiranga",
-        "rating": 5,
-        "review": "I had never started a car in my life and I get extremely anxious. Hélvio explained every detail without raising his voice or complaining. He conveys unbelievable confidence. Highly recommended for anyone afraid of stressed instructors!"
-      }
-    ],
+    "licensed": "Licensed 8 years ago",
+    "detranPassed": "Detran/RS Passed",
+    "firstLicense": "1st License",
+    "items": {
+      "service1": "Licensed Driver Training • Sapiranga",
+      "review1": "My license was hidden in a drawer for 8 years out of panic. Just sitting in the driver's seat made my heart race. With Hélvio, we did lessons focused on my route from Sapiranga to Novo Hamburgo via RS-239. His calmness was everything! Today I commute confidently.",
+      "service2": "Practical Test Reinforcement • Vale do Sinos",
+      "review2": "I had failed parallel parking twice on the Detran exam. I took reinforcement lessons with Hélvio and he taught me very simple visual reference points. The mock exam was identical to the real test. Passed first try with zero point deductions!",
+      "service3": "1st License from Scratch • Campo Bom / Sapiranga",
+      "review3": "I had never started a car in my life and I get extremely anxious. Hélvio explained every detail without raising his voice or complaining. He conveys unbelievable confidence. Highly recommended for anyone afraid of stressed instructors!"
+    },
     "trainedCountText": "+500 drivers prepared in Sapiranga and region"
   },
   "faq": {

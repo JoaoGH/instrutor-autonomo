@@ -232,36 +232,17 @@
     "badge": "Avaliações Reais",
     "title": "Histórias de quem superou o medo e conquistou a CNH",
     "subtitle": "Veja o relato de quem passou pelas mesmas inseguranças que você em Sapiranga e região e hoje dirige com liberdade.",
-    "items": [
-      {
-        "name": "Mariana R.",
-        "initials": "MR",
-        "tag": "Habilitada há 8 anos",
-        "tagColor": "bg-brand-100 text-brand-800",
-        "service": "Treinamento para Habilitados • Sapiranga",
-        "rating": 5,
-        "review": "Minha CNH estava guardada na gaveta há 8 anos por puro pânico. Bastava sentar no banco do motorista para o coração disparar. Com o Hélvio fiz aulas focadas no meu trajeto de Sapiranga para Novo Hamburgo pela RS-239. A calma dele foi tudo! Hoje vou e volto dirigindo tranquilamente."
-      },
-      {
-        "name": "Lucas Santos",
-        "initials": "LS",
-        "tag": "Aprovado Detran/RS",
-        "tagColor": "bg-amber-100 text-amber-800",
-        "service": "Reforço para Exame Prático • Vale do Sinos",
-        "rating": 5,
-        "review": "Eu já tinha reprovado duas vezes na baliza do Detran. Contratei o reforço com o Hélvio e ele me ensinou pontos de referência visuais muito fáceis. O simulado que fizemos foi idêntico à prova. Passei de primeira sem perder nenhum ponto!"
-      },
-      {
-        "name": "Cláudia Albuquerque",
-        "initials": "CA",
-        "tag": "1ª Habilitação",
-        "tagColor": "bg-blue-100 text-blue-800",
-        "service": "1ª Habilitação do Zero • Campo Bom / Sapiranga",
-        "rating": 5,
-        "review": "Nunca tinha ligado um carro na vida e sou extremamente ansiosa. O Hélvio explicou cada detalhe sem nunca levantar a voz ou reclamar. Ele transmite uma segurança surreal. Recomendo de olhos fechados para quem tem medo de instrutor estressado!"
-      }
-    ],
-    "trainedCountText": "+500 motoristas preparados em Sapiranga e região"
+    "licensed": "Habilitada há 8 anos",
+    "detranPassed": "Aprovado Detran/RS",
+    "firstLicense": "1ª Habilitação",
+    "items": {
+      "service1": "Treinamento para Habilitados • Sapiranga",
+      "review1": "Minha CNH estava guardada na gaveta há 8 anos por puro pânico. Bastava sentar no banco do motorista para o coração disparar. Com o Hélvio fiz aulas focadas no meu trajeto de Sapiranga para Novo Hamburgo pela RS-239. A calma dele foi tudo! Hoje vou e volto dirigindo tranquilamente.",
+      "service2": "Reforço para Exame Prático • Vale do Sinos",
+      "review2": "Eu já tinha reprovado duas vezes na baliza do Detran. Contratei o reforço com o Hélvio e ele me ensinou pontos de referência visuais muito fáceis. O simulado que fizemos foi idêntico à prova. Passei de primeira sem perder nenhum ponto!",
+      "service3": "1ª Habilitação do Zero • Campo Bom / Sapiranga",
+      "review3": "Nunca tinha ligado um carro na vida e sou extremamente ansiosa. O Hélvio explicou cada detalhe sem nunca levantar a voz ou reclamar. Ele transmite uma segurança surreal. Recomendo de olhos fechados para quem tem medo de instrutor estressado!"
+    }
   },
   "faq": {
     "badge": "Tire suas Dúvidas",
