@@ -55,7 +55,7 @@ export default function About() {
               {/* Badge Flutuante de Credencial */}
               <div className="absolute -bottom-8 right-4 sm:right-6 bg-white py-3 px-5 rounded-2xl shadow-xl border border-slate-200 flex items-center gap-3 z-20">
                 <div className="w-10 h-10 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold">
-                  <i className="fa-solid fa-shield-check text-xl"></i>
+                  <i className="fa-solid fa-building-shield text-xl"></i>
                 </div>
                 <div>
                   <span className="block text-xs font-bold text-navy-900">
