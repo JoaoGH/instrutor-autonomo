@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getWhatsAppUrl } from '../utils/whatsapp';
-import heroImg from "../assets/images/hero.webp";
+import heroImg from '../assets/images/hero.webp';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -112,14 +112,12 @@ export default function Hero() {
               {/* Imagem / Visual Ilustrativo */}
               <div className="aspect-[4/5] rounded-3xl bg-gradient-to-tr from-brand-800 via-navy-900 to-navy-950 p-6 flex flex-col justify-between text-white shadow-2xl relative overflow-hidden group">
                 <img
-                    src={heroImg}
-                    alt={t('contact.instructorName')}
-                    className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-500"
+                  src={heroImg}
+                  alt={t('contact.instructorName')}
+                  className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-950/40 to-transparent"></div>
-                  <div className="relative z-10 space-y-3">
-                  </div>
-
+                <div className="relative z-10 space-y-3"></div>
 
                 {/* Lista de Checkmarks Rápidos */}
                 <div className="relative z-10 space-y-2">
@@ -133,27 +131,32 @@ export default function Hero() {
                   {/* Bloco do Carrossel de Texto Animado */}
                   <div className="p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
                     <div className="h-12 relative overflow-hidden">
-                      {Array.isArray(checks) && checks.map((item, idx) => (
+                      {Array.isArray(checks) &&
+                        checks.map((item, idx) => (
                           <div
-                              key={idx}
-                              className={`absolute inset-0 transition-all duration-500 ease-in-out flex items-center gap-3 ${
-                                  idx === currentCheck ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
-                              }`}
+                            key={idx}
+                            className={`absolute inset-0 transition-all duration-500 ease-in-out flex items-center gap-3 ${
+                              idx === currentCheck
+                                ? 'opacity-100 translate-x-0'
+                                : 'opacity-0 translate-x-4'
+                            }`}
                           >
                             <i className="fa-solid fa-check text-brand-400 text-lg"></i>
                             <span className="text-sm text-slate-200">
-                          <strong className="text-xs text-white font-bold">{item.strong}</strong>
+                              <strong className="text-xs text-white font-bold">
+                                {item.strong}
+                              </strong>
                               <p className="text-xs text-slate-200 italic">{item.text}</p>
-                        </span>
+                            </span>
                           </div>
-                      ))}
+                        ))}
                     </div>
 
                     {/* Barra de Progresso */}
                     <div className="mt-4 h-1 w-full bg-white/10 rounded-full overflow-hidden">
                       <div
-                          key={currentCheck} // O react destrói e recria a div, reiniciando a animação CSS
-                          className="h-full bg-brand-500 animate-progress"
+                        key={currentCheck} // O react destrói e recria a div, reiniciando a animação CSS
+                        className="h-full bg-brand-500 animate-progress"
                       ></div>
                     </div>
                   </div>

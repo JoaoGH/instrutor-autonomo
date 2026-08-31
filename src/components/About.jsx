@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import heroImg from '../assets/images/hero.webp';
-import {CONTACT_INFO} from "../data/content.js";
+import { CONTACT_INFO } from '../data/content.js';
 
 export default function About() {
   const { t } = useTranslation();
@@ -112,10 +112,10 @@ export default function About() {
                 <span>{t('about.buttonText')}</span>
               </a>
               <a
-                  href={CONTACT_INFO.instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition"
+                href={CONTACT_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition"
               >
                 <i className="fa-brands fa-instagram text-lg"></i>
                 <span>{t('about.instagram')}</span>
