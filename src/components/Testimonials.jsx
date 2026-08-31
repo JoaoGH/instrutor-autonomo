@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
+import { TESTIMONIALS} from "../data/content.js";
 
 export default function Testimonials() {
   const { t } = useTranslation();
-  const items = t('testimonials.items', { returnObjects: true }) || [];
+  const items = TESTIMONIALS;
 
   return (
     <section id="depoimentos" className="py-20 bg-white border-b border-slate-200/60">
@@ -21,9 +22,9 @@ export default function Testimonials() {
         {/* Grid de Depoimentos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Array.isArray(items) &&
-            items.map((item, idx) => (
+            items.map((item) => (
               <div
-                key={idx}
+                key={item.id}
                 className="p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-soft"
               >
                 <div className="space-y-4">
@@ -34,13 +35,13 @@ export default function Testimonials() {
                       ))}
                     </div>
                     <span
-                      className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full ${item.tagColor}`}
+                      className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full ${item.type.tagColor}`}
                     >
-                      {item.tag}
+                      {t(item.type.label)}
                     </span>
                   </div>
                   <p className="text-sm text-slate-700 leading-relaxed italic">
-                    &quot;{item.review}&quot;
+                    &quot;{t(item.review)}&quot;
                   </p>
                 </div>
 
@@ -50,20 +51,11 @@ export default function Testimonials() {
                   </div>
                   <div>
                     <span className="block font-bold text-navy-900 text-sm">{item.name}</span>
-                    <span className="block text-xs text-slate-600">{item.service}</span>
+                    <span className="block text-xs text-slate-600">{t(item.service)}</span>
                   </div>
                 </div>
               </div>
             ))}
-        </div>
-
-        {/* Selo de Avaliações Google */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-100 border border-slate-200 text-xs sm:text-sm text-slate-700">
-            <span className="text-brand-700 font-semibold">
-              {t('testimonials.trainedCountText')}
-            </span>
-          </div>
         </div>
       </div>
     </section>
