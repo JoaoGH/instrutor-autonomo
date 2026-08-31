@@ -86,3 +86,9 @@ export const TESTIMONIALS = [
     review: 'testimonials.items.review6',
   },
 ];
+
+export const TOAST_ACTIVITIES = {
+  tempoPrimeiroToast: 10000,
+  tempoVisivelToast: 6000,
+  intervaloEntreToasts: 24000,
+};
