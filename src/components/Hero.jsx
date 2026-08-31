@@ -1,14 +1,25 @@
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import heroImg from "../assets/images/hero.webp";
 
 export default function Hero() {
   const { t } = useTranslation();
-
   const heroWhatsAppUrl = getWhatsAppUrl(t('hero.whatsappMsgHero'));
-
   const cardWhatsAppUrl = getWhatsAppUrl(t('hero.whatsappMsgCard'));
-
   const checks = t('hero.card.checks', { returnObjects: true }) || [];
+
+  // Estado para controlar qual checkmark está ativo no momento
+  const [currentCheck, setCurrentCheck] = useState(0);
+
+  // Efeito para avançar o carrossel a cada 4 segundos
+  useEffect(() => {
+    if (!checks.length) return;
+    const timer = setInterval(() => {
+      setCurrentCheck((prev) => (prev + 1) % checks.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [checks.length]);
 
   return (
     <section
@@ -99,42 +110,54 @@ export default function Hero() {
               </div>
 
               {/* Imagem / Visual Ilustrativo */}
-              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-brand-900 via-navy-900 to-brand-950 aspect-[4/3] flex items-center justify-center p-6 text-white shadow-inner">
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+              <div className="aspect-[4/5] rounded-3xl bg-gradient-to-tr from-brand-800 via-navy-900 to-navy-950 p-6 flex flex-col justify-between text-white shadow-2xl relative overflow-hidden group">
+                <img
+                    src={heroImg}
+                    alt={t('contact.instructorName')}
+                    className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-950/40 to-transparent"></div>
+                  <div className="relative z-10 space-y-3">
+                  </div>
 
-                <div className="relative z-10 text-center space-y-3">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 shadow-lg">
-                    <i className="fa-solid fa-id-card text-3xl text-brand-400"></i>
+
+                {/* Lista de Checkmarks Rápidos */}
+                <div className="relative z-10 space-y-2">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-brand-300">
+                    <i className="fa-solid fa-heart-pulse"></i> <p>{t('hero.card.pill')}</p>
                   </div>
-                  <div>
-                    <h2 className="font-heading font-extrabold text-xl text-white">
-                      {t('hero.card.title')}
-                    </h2>
-                    <p className="text-xs text-slate-300 mt-1 max-w-xs mx-auto">
-                      {t('hero.card.description')}
-                    </p>
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-brand-300">
+                    <i className="fa-solid fa-id-card pulse"></i> {t('hero.card.title')}
                   </div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-400/30 text-xs font-semibold text-brand-300">
-                    <i className="fa-solid fa-heart-pulse"></i> {t('hero.card.pill')}
+
+                  {/* Bloco do Carrossel de Texto Animado */}
+                  <div className="p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                    <div className="h-12 relative overflow-hidden">
+                      {Array.isArray(checks) && checks.map((item, idx) => (
+                          <div
+                              key={idx}
+                              className={`absolute inset-0 transition-all duration-500 ease-in-out flex items-center gap-3 ${
+                                  idx === currentCheck ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
+                              }`}
+                          >
+                            <i className="fa-solid fa-check text-brand-400 text-lg"></i>
+                            <span className="text-sm text-slate-200">
+                          <strong className="text-xs text-white font-bold">{item.strong}</strong>
+                              <p className="text-xs text-slate-200 italic">{item.text}</p>
+                        </span>
+                          </div>
+                      ))}
+                    </div>
+
+                    {/* Barra de Progresso */}
+                    <div className="mt-4 h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                      <div
+                          key={currentCheck} // O react destrói e recria a div, reiniciando a animação CSS
+                          className="h-full bg-brand-500 animate-progress"
+                      ></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Lista de Checkmarks Rápidos */}
-              <div className="mt-5 space-y-2.5">
-                {Array.isArray(checks) &&
-                  checks.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-start gap-3 text-xs sm:text-sm text-slate-700"
-                    >
-                      <i className="fa-solid fa-circle-check text-brand-600 text-base mt-0.5"></i>
-                      <span>
-                        <strong>{item.strong}</strong>
-                        {item.text}
-                      </span>
-                    </div>
-                  ))}
               </div>
 
               {/* CTA do Card */}
@@ -143,41 +166,11 @@ export default function Hero() {
                   href={cardWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white font-bold text-sm shadow-lg shadow-brand-600/25 transition"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-whatsapp-600 to-whatsapp-700 hover:from-whatsapp-700 hover:to-whatsapp-800 text-white font-bold text-sm shadow-lg shadow-brand-600/25 transition"
                 >
                   <i className="fa-brands fa-whatsapp text-lg"></i>
                   <span>{t('hero.card.buttonText')}</span>
                 </a>
-              </div>
-            </div>
-
-            {/* Floating Badge 1 (Topo Direito) */}
-            <div className="hidden sm:flex animate-float absolute -top-5 -right-5 z-20 items-center gap-3 bg-white py-2.5 px-4 rounded-2xl shadow-xl border border-slate-100">
-              <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg">
-                <i className="fa-solid fa-trophy"></i>
-              </div>
-              <div>
-                <span className="block text-xs font-black text-navy-900 leading-tight">
-                  {t('hero.floatingBadge1.title')}
-                </span>
-                <span className="block text-[11px] font-semibold text-slate-600">
-                  {t('hero.floatingBadge1.subtitle')}
-                </span>
-              </div>
-            </div>
-
-            {/* Floating Badge 2 (Inferior Esquerdo) */}
-            <div className="hidden sm:flex animate-float-delayed absolute -bottom-5 -left-5 z-20 items-center gap-3 bg-navy-900 text-white py-2.5 px-4 rounded-2xl shadow-xl border border-navy-800">
-              <div className="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold text-lg">
-                <i className="fa-solid fa-heart text-white"></i>
-              </div>
-              <div>
-                <span className="block text-xs font-bold text-white leading-tight">
-                  {t('hero.floatingBadge2.title')}
-                </span>
-                <span className="block text-[11px] font-medium text-slate-300">
-                  {t('hero.floatingBadge2.subtitle')}
-                </span>
               </div>
             </div>
           </div>
