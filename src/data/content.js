@@ -46,4 +46,31 @@ export const TESTIMONIALS = [
     rating: 5,
     review: "testimonials.items.review3",
   },
+  {
+    id: 3,
+    type: TipoTestemunho.HABILITADO,
+    name: "Fernanda Lima",
+    initials: "FL",
+    service: "testimonials.items.service4",
+    rating: 5,
+    review: "testimonials.items.review4",
+  },
+  {
+    id: 4,
+    type: TipoTestemunho.PRIMEIRA_HABILITACAO,
+    name: "Roberto Vargas",
+    initials: "RV",
+    service: "testimonials.items.service5",
+    rating: 5,
+    review: "testimonials.items.review5",
+  },
+  {
+    id: 5,
+    type: TipoTestemunho.APROVADO_DETRAN,
+    name: "Amanda Costa",
+    initials: "AC",
+    service: "testimonials.items.service6",
+    rating: 5,
+    review: "testimonials.items.review6",
+  }
 ];
