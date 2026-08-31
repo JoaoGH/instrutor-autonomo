@@ -88,6 +88,7 @@ export const TESTIMONIALS = [
 ];
 
 export const TOAST_ACTIVITIES = {
+  isActive: false,
   tempoPrimeiroToast: 10000,
   tempoVisivelToast: 6000,
   intervaloEntreToasts: 24000,
