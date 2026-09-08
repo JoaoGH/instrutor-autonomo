@@ -3,13 +3,25 @@
  * Landing Page - Instrutor Hélvio
  */
 
+export const SITE_CONFIG = {
+  url: 'https://instrutorhelvio.com.br',
+  canonicalUrl: 'https://instrutorhelvio.com.br/',
+  title: 'Instrutor Hélvio | Aulas de Direção em Sapiranga e Região',
+  description:
+    'Aulas de direção para habilitados e 1ª CNH em Sapiranga e região. Perca o medo de dirigir com método humanizado e paciente. Agende sua aula pelo WhatsApp!',
+  ogImage: 'https://instrutorhelvio.com.br/hero.webp',
+};
+
 export const CONTACT_INFO = {
+  name: 'Instrutor Hélvio',
   whatsappNumber: '5551996562126',
   phoneFormatted: '(51) 99656-2126',
   phoneTel: '+5551996562126',
   instagramHandle: '@instrutor.helvio',
   instagramUrl: 'https://instagram.com/instrutor.helvio',
+  city: 'Sapiranga',
   state: 'RS',
+  region: 'Vale do Sinos / RS',
 };
 
 const TipoTestemunho = Object.freeze({

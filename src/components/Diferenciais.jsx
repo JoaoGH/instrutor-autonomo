@@ -5,7 +5,11 @@ export default function Diferenciais() {
   const items = t('diferenciais.items', { returnObjects: true }) || [];
 
   return (
-    <section id="diferenciais" className="py-20 bg-white border-y border-slate-200/60">
+    <section
+      id="diferenciais"
+      aria-label={t('diferenciais.ariaLabel')}
+      className="py-20 bg-white border-y border-slate-200/60"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">

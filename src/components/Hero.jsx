@@ -24,6 +24,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
+      aria-label={t('hero.ariaLabel')}
       className="relative hero-gradient-bg pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden border-b border-slate-200/60"
     >
       {/* Círculos decorativos de fundo */}
@@ -113,7 +114,9 @@ export default function Hero() {
               <div className="aspect-[4/5] rounded-3xl bg-gradient-to-tr from-brand-800 via-navy-900 to-navy-950 p-6 flex flex-col justify-between text-white shadow-2xl relative overflow-hidden group">
                 <img
                   src={heroImg}
-                  alt={t('contact.instructorName')}
+                  alt={t('hero.imageAlt')}
+                  loading="eager"
+                  fetchPriority="high"
                   className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-950/40 to-transparent"></div>

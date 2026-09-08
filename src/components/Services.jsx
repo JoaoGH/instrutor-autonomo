@@ -7,7 +7,7 @@ export default function Services() {
   const bannerWhatsAppUrl = getWhatsAppUrl(t('services.banner.whatsappMessage'));
 
   return (
-    <section id="servicos" className="py-20 bg-slate-50">
+    <section id="servicos" aria-label={t('services.ariaLabel')} className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header da Seção */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -98,9 +98,9 @@ export default function Services() {
             <span className="inline-block px-3 py-1 rounded-full bg-brand-500/30 text-brand-300 text-xs font-bold uppercase">
               {t('services.banner.tag')}
             </span>
-            <h4 className="font-heading text-xl sm:text-2xl font-bold">
+            <h3 className="font-heading text-xl sm:text-2xl font-bold">
               {t('services.banner.title')}
-            </h4>
+            </h3>
             <p className="text-sm text-slate-300 max-w-xl">{t('services.banner.description')}</p>
           </div>
           <a

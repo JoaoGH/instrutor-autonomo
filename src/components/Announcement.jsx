@@ -5,7 +5,10 @@ export default function Announcement() {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-navy-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-navy-800">
+    <aside
+      aria-label={t('announcement.ariaLabel')}
+      className="bg-navy-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-navy-800"
+    >
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center justify-center w-2 h-2 rounded-full bg-brand-400 animate-pulse-dot"></span>
@@ -25,6 +28,6 @@ export default function Announcement() {
           </a>
         </div>
       </div>
-    </div>
+    </aside>
   );
 }

@@ -40,7 +40,10 @@ export default function Header() {
           <a href="#inicio" className="flex items-center gap-3 group" onClick={closeMobileMenu}>
             <img
               src={logoImg}
-              alt={t('contact.instructorName')}
+              alt={t('header.logoAlt')}
+              width="48"
+              height="48"
+              loading="eager"
               className="w-12 h-12 rounded-2xl object-cover shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform"
             />
             <div>
@@ -54,7 +57,7 @@ export default function Header() {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav aria-label={t('header.navAriaLabel')} className="hidden lg:flex items-center gap-8">
             <a
               href="#inicio"
               className="text-sm font-semibold text-slate-700 hover:text-brand-600 transition"
@@ -127,7 +130,10 @@ export default function Header() {
 
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden border-b border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-3 shadow-xl animate-fadeIn">
+        <nav
+          aria-label={t('header.mobileNavAriaLabel')}
+          className="lg:hidden border-b border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-3 shadow-xl animate-fadeIn"
+        >
           <a
             href="#inicio"
             onClick={closeMobileMenu}
@@ -183,7 +189,7 @@ export default function Header() {
               <span>{t('nav.scheduleBtnMobile')}</span>
             </a>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

@@ -2,10 +2,14 @@ import { useTranslation } from 'react-i18next';
 
 export default function Metrics() {
   const { t } = useTranslation();
-  const metrics = t('metrics', { returnObjects: true }) || [];
+  const metrics = t('metrics.items', { returnObjects: true }) || [];
 
   return (
-    <section className="bg-navy-900 text-white py-12 border-b border-navy-800">
+    <section
+      id="metricas"
+      aria-label={t('metrics.ariaLabel')}
+      className="bg-navy-900 text-white py-12 border-b border-navy-800"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-navy-800">
           {Array.isArray(metrics) &&
