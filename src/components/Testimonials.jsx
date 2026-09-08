@@ -31,7 +31,11 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="depoimentos" className="py-20 bg-white border-b border-slate-200/60">
+    <section
+      id="depoimentos"
+      aria-label={t('testimonials.ariaLabel')}
+      className="py-20 bg-white border-b border-slate-200/60"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -50,7 +54,7 @@ export default function Testimonials() {
           <button
             onClick={() => scroll('left')}
             className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-white border border-slate-200 shadow-md rounded-full text-slate-600 hover:text-brand-600 hover:bg-slate-50 transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 focus:opacity-100"
-            aria-label="Anterior"
+            aria-label={t('testimonials.prevBtn')}
           >
             <i className="fa-solid fa-chevron-left"></i>
           </button>
@@ -101,7 +105,7 @@ export default function Testimonials() {
           <button
             onClick={() => scroll('right')}
             className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-white border border-slate-200 shadow-md rounded-full text-slate-600 hover:text-brand-600 hover:bg-slate-50 transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 focus:opacity-100"
-            aria-label="Próximo"
+            aria-label={t('testimonials.nextBtn')}
           >
             <i className="fa-solid fa-chevron-right"></i>
           </button>

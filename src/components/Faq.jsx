@@ -11,7 +11,7 @@ export default function Faq() {
   };
 
   return (
-    <section id="duvidas" className="py-20 bg-slate-50">
+    <section id="duvidas" aria-label={t('faq.ariaLabel')} className="py-20 bg-slate-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho */}
         <div className="text-center max-w-2xl mx-auto space-y-4 mb-14">

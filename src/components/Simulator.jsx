@@ -49,7 +49,11 @@ export default function Simulator() {
   const dynamicWhatsAppUrl = getWhatsAppUrl(composedMessage);
 
   return (
-    <section className="py-16 bg-brand-50/70 border-b border-brand-100">
+    <section
+      id="simulador"
+      aria-label={t('simulator.ariaLabel')}
+      className="py-16 bg-brand-50/70 border-b border-brand-100"
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-3xl shadow-xl border border-brand-200/60 p-6 sm:p-10">
           <div className="text-center max-w-2xl mx-auto space-y-3 mb-8">

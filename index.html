@@ -4,27 +4,139 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO & Meta Tags -->
-  <title>Instrutor Hélvio | Aulas Práticas de Direção em Sapiranga e Região - CNH & Habilitados</title>
-  <meta name="description" content="Aulas práticas de direção em Sapiranga/RS e região. 1ª Habilitação, reforço para exame prático do Detran/RS e treinamento para habilitados com medo de dirigir (perde-medo). Agende no WhatsApp: (51) 99656-2126.">
+  <!-- SEO & Meta Tags Principais -->
+  <title>%SITE_TITLE%</title>
+  <meta name="description" content="%SITE_DESCRIPTION%">
   <meta name="keywords" content="instrutor de autoescola sapiranga, aulas para habilitados sapiranga, perder medo de dirigir sapiranga, reforço detran rs, exame pratico detran sapiranga campo bom novo hamburgo, primeira cnh sapiranga, instrutor helvio">
-  <meta name="author" content="Instrutor Hélvio">
+  <meta name="author" content="%CONTACT_NAME%">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="BR-%CONTACT_STATE%">
+  <meta name="geo.placename" content="%CONTACT_CITY%">
   
-  <!-- Open Graph / Redes Sociais -->
+  <!-- URL Canônica -->
+  <link rel="canonical" href="%SITE_CANONICAL%" />
+  
+  <!-- Open Graph / Redes Sociais (WhatsApp, Facebook, Instagram) -->
+  <meta property="og:locale" content="pt_BR">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Instrutor Hélvio | Aulas Práticas de Direção em Sapiranga/RS">
-  <meta property="og:description" content="Conquiste sua CNH e sua independência no trânsito em Sapiranga e Vale do Sinos com um método humanizado e muita paciência.">
+  <meta property="og:site_name" content="%CONTACT_NAME%">
+  <meta property="og:title" content="%SITE_TITLE%">
+  <meta property="og:description" content="%SITE_DESCRIPTION%">
+  <meta property="og:url" content="%SITE_CANONICAL%">
+  <meta property="og:image" content="%SITE_OG_IMAGE%">
+  <meta property="og:image:secure_url" content="%SITE_OG_IMAGE%">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="%CONTACT_NAME% - Aulas Práticas de Direção em %CONTACT_CITY% e Região">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="%SITE_TITLE%">
+  <meta name="twitter:description" content="%SITE_DESCRIPTION%">
+  <meta name="twitter:image" content="%SITE_OG_IMAGE%">
+  <meta name="twitter:image:alt" content="%CONTACT_NAME% - Aulas Práticas de Direção em %CONTACT_CITY% e Região">
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts Preconnect & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Dados Estruturados Schema.org / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService", "EducationalOrganization"],
+        "@id": "%SITE_URL%/#business",
+        "name": "%CONTACT_NAME% - Aulas Práticas de Direção",
+        "alternateName": "%CONTACT_NAME%",
+        "url": "%SITE_CANONICAL%",
+        "logo": "%SITE_URL%/logo.webp",
+        "image": "%SITE_OG_IMAGE%",
+        "description": "Aulas práticas de direção veicular em %CONTACT_CITY%/%CONTACT_STATE% e região. Treinamento para habilitados perderem o medo de dirigir, reforço para exame prático do Detran/%CONTACT_STATE% e 1ª CNH.",
+        "telephone": "%CONTACT_PHONE_TEL%",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "%CONTACT_CITY%",
+          "addressRegion": "%CONTACT_STATE%",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -29.6381,
+          "longitude": -51.0069
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Sapiranga"
+          },
+          {
+            "@type": "City",
+            "name": "Campo Bom"
+          },
+          {
+            "@type": "City",
+            "name": "Novo Hamburgo"
+          },
+          {
+            "@type": "City",
+            "name": "Nova Hartz"
+          },
+          {
+            "@type": "City",
+            "name": "Araricá"
+          },
+          {
+            "@type": "City",
+            "name": "Taquara"
+          }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "06:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday"],
+            "opens": "06:00",
+            "closes": "12:00"
+          }
+        ],
+        "sameAs": [
+          "%CONTACT_INSTAGRAM_URL%"
+        ],
+        "founder": {
+          "@id": "%SITE_URL%/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "%SITE_URL%/#person",
+        "name": "Hélvio",
+        "jobTitle": "Instrutor de Trânsito Credenciado DETRAN/%CONTACT_STATE%",
+        "worksFor": {
+          "@id": "%SITE_URL%/#business"
+        },
+        "sameAs": [
+          "%CONTACT_INSTAGRAM_URL%"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
   <div id="root"></div>

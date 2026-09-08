@@ -10,7 +10,7 @@ export default function About() {
   const aboutWhatsAppUrl = getWhatsAppUrl(t('about.whatsappMessage'));
 
   return (
-    <section id="sobre" className="py-20 bg-slate-50">
+    <section id="sobre" aria-label={t('about.ariaLabel')} className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Foto / Avatar & Credenciamento */}
@@ -20,7 +20,8 @@ export default function About() {
               <div className="aspect-[4/5] rounded-3xl bg-gradient-to-tr from-brand-800 via-navy-900 to-navy-950 p-6 flex flex-col justify-between text-white shadow-2xl relative overflow-hidden group">
                 <img
                   src={heroImg}
-                  alt={t('contact.instructorName')}
+                  alt={t('about.imageAlt')}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-950/40 to-transparent"></div>
@@ -33,9 +34,9 @@ export default function About() {
 
                 <div className="relative z-10 space-y-3">
                   <div>
-                    <h3 className="font-heading text-2xl font-black text-white">
+                    <span className="font-heading text-2xl font-black text-white block">
                       {t('contact.instructorName')}
-                    </h3>
+                    </span>
                     <p className="text-xs font-semibold text-slate-200">
                       {t('about.subtitleRole')}
                     </p>
@@ -94,7 +95,7 @@ export default function About() {
                   >
                     <i className={`${highlight.icon} text-brand-600 text-xl mt-1`}></i>
                     <div>
-                      <h4 className="font-bold text-navy-900 text-sm">{highlight.title}</h4>
+                      <h3 className="font-bold text-navy-900 text-sm">{highlight.title}</h3>
                       <p className="text-xs text-slate-600">{highlight.description}</p>
                     </div>
                   </div>

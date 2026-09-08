@@ -16,6 +16,11 @@
     "openMenu": "Abrir menu de navegação",
     "closeMenu": "Fechar menu de navegação"
   },
+  "header": {
+    "logoAlt": "Logo do Instrutor Hélvio - Aulas de Direção em Sapiranga e Região",
+    "navAriaLabel": "Navegação principal",
+    "mobileNavAriaLabel": "Navegação móvel"
+  },
   "contact": {
     "instructorName": "Instrutor Hélvio",
     "roleTitle": "Instrutor de Trânsito Credenciado DETRAN/RS",
@@ -27,11 +32,14 @@
     "defaultMessage": "Olá, Instrutor Hélvio! Vi sua página e gostaria de informações sobre aulas práticas de direção em Sapiranga e região."
   },
   "announcement": {
+    "ariaLabel": "Aviso e Status de Atendimento",
     "badge": "Agenda Aberta",
     "text": "Aulas práticas em Sapiranga/RS e região • Vagas abertas para esta semana e fins de semana",
     "detranBadge": "Instrutor Credenciado DETRAN/RS"
   },
   "hero": {
+    "ariaLabel": "Início e Apresentação",
+    "imageAlt": "Instrutor Hélvio - Instrutor de trânsito credenciado pelo Detran-RS ministrando aula prática de direção",
     "badge": "🏆 Instrutor Credenciado DETRAN/RS • Sapiranga e Vale do Sinos",
     "titleMain": "Conquiste sua CNH e volte a dirigir com",
     "titleHighlight": "tranquilidade, paciência e segurança em Sapiranga e região!",
@@ -66,13 +74,17 @@
     "whatsappMsgHero": "Olá, Instrutor Hélvio! Vi sua página e quero agendar uma aula prática em Sapiranga/região. Pode me passar os detalhes?",
     "whatsappMsgCard": "Olá, Instrutor Hélvio! Gostaria de tirar dúvidas sobre as aulas práticas em Sapiranga/região."
   },
-  "metrics": [
-    { "number": "+25 Anos", "label": "De Experiência no Ensino Prático" },
-    { "number": "+6000", "label": "Alunos Aprovados" },
-    { "number": "98%", "label": "Índice de Aprovação Prática Detran/RS" },
-    { "number": "100%", "label": "Atenção e Didática Individualizada" }
-  ],
+  "metrics": {
+    "ariaLabel": "Métricas e Resultados",
+    "items": [
+      { "number": "+25 Anos", "label": "De Experiência no Ensino Prático" },
+      { "number": "+6000", "label": "Alunos Aprovados" },
+      { "number": "98%", "label": "Índice de Aprovação Prática Detran/RS" },
+      { "number": "100%", "label": "Atenção e Didática Individualizada" }
+    ]
+  },
   "services": {
+    "ariaLabel": "Serviços e Aulas de Direção",
     "badge": "Serviços Sob Medida",
     "title": "Como posso te ajudar a conquistar sua independência no volante?",
     "subtitle": "Treinamentos práticos personalizados em Sapiranga/RS e cidades vizinhas, focados na sua segurança e no seu ritmo.",
@@ -133,6 +145,7 @@
     }
   },
   "diferenciais": {
+    "ariaLabel": "Diferenciais do Método",
     "badge": "Por que treinar comigo?",
     "title": "O método que transforma insegurança em independência",
     "subtitle": "Diga adeus ao medo de errar, aos instrutores impacientes e às aulas engessadas. Aprenda a dirigir de verdade.",
@@ -170,6 +183,7 @@
     ]
   },
   "simulator": {
+    "ariaLabel": "Simulador de Atendimento Personalizado",
     "badge": "Agendamento Rápido",
     "title": "Monte seu atendimento personalizado",
     "subtitle": "Selecione o tipo de aula que você precisa e gere sua mensagem pronta para enviar no WhatsApp com 1 clique.",
@@ -204,6 +218,8 @@
     "buttonText": "Enviar Solicitação Direto no WhatsApp"
   },
   "about": {
+    "ariaLabel": "Sobre o Instrutor Hélvio",
+    "imageAlt": "Instrutor Hélvio - Instrutor credenciado pelo DETRAN-RS",
     "badge": "Conheça Seu Instrutor",
     "title": "Mais de duas décadas ajudando pessoas a conquistarem sua autonomia no trânsito",
     "text1": "Olá! Sou o Instrutor Hélvio. Atuo com formação e aperfeiçoamento de motoristas em Sapiranga/RS e em toda a região do Vale do Sinos. Ao longo de mais de 25 anos de profissão, entendi que o maior desafio de quem quer dirigir não é mecânico, mas sim a pressão e a ansiedade geradas por métodos impacientes.",
@@ -232,6 +248,9 @@
     "whatsappMessage": "Olá, Instrutor Hélvio! Li sobre o seu método e gostaria de bater um papo sobre as aulas práticas."
   },
   "testimonials": {
+    "ariaLabel": "Depoimentos de Alunos",
+    "prevBtn": "Depoimento anterior",
+    "nextBtn": "Próximo depoimento",
     "badge": "Avaliações Reais",
     "title": "Histórias de quem superou o medo e conquistou a CNH",
     "subtitle": "Veja o relato de quem passou pelas mesmas inseguranças que você em Sapiranga e região e hoje dirige com liberdade.",
@@ -254,6 +273,7 @@
     }
   },
   "faq": {
+    "ariaLabel": "Perguntas Frequentes",
     "badge": "Tire suas Dúvidas",
     "title": "Perguntas Frequentes",
     "subtitle": "Tudo o que você precisa saber antes de agendar sua primeira aula prática em Sapiranga e região.",
@@ -285,6 +305,8 @@
     ]
   },
   "cta": {
+    "ariaLabel": "Contato e Agendamento",
+    "instagramAriaLabel": "Instagram do {{name}}",
     "urgencyBadge": "Vagas Semanais Limitadas em Sapiranga e Região",
     "titleMain": "Pronto para assumir o volante e conquistar a sua",
     "titleHighlight": "liberdade",
@@ -298,6 +320,9 @@
     "instagramFollow": "Siga no Instagram:"
   },
   "footer": {
+    "ariaLabel": "Rodapé do site",
+    "logoAlt": "Logo do Instrutor Hélvio - Aulas de Direção",
+    "quickNavAriaLabel": "Links rápidos do rodapé",
     "brandDescription": "Instrução prática veicular especializada para 1ª Habilitação, reforço para exames práticos do Detran/RS e superação do medo de dirigir no trânsito real de Sapiranga e região.",
     "serving": "Atendendo:",
     "quickNav": "Navegação Rápida",

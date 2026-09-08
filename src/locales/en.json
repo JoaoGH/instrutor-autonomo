@@ -16,6 +16,11 @@
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu"
   },
+  "header": {
+    "logoAlt": "Instructor Hélvio Logo - Driving Lessons in Sapiranga and Region",
+    "navAriaLabel": "Main navigation",
+    "mobileNavAriaLabel": "Mobile navigation"
+  },
   "contact": {
     "instructorName": "Instructor Hélvio",
     "roleTitle": "DETRAN/RS Certified Driving Instructor",
@@ -27,11 +32,14 @@
     "defaultMessage": "Hello, Instructor Hélvio! I saw your page and would like information about practical driving lessons in Sapiranga and region."
   },
   "announcement": {
+    "ariaLabel": "Notice and Service Status",
     "badge": "Open Schedule",
     "text": "Practical lessons in Sapiranga/RS and region • Slots open for this week and weekends",
     "detranBadge": "DETRAN/RS Certified Instructor"
   },
   "hero": {
+    "ariaLabel": "Home and Overview",
+    "imageAlt": "Instructor Hélvio - DETRAN-RS certified driving instructor conducting practical driving lesson",
     "badge": "🏆 DETRAN/RS Certified Instructor • Sapiranga and Vale do Sinos",
     "titleMain": "Get your driver's license and drive with",
     "titleHighlight": "peace of mind, patience and safety in Sapiranga and region!",
@@ -64,13 +72,17 @@
     "whatsappMsgHero": "Hello, Instructor Hélvio! I saw your page and want to schedule a practical lesson in Sapiranga/region. Could you send me details?",
     "whatsappMsgCard": "Hello, Instructor Hélvio! I would like to ask questions about practical lessons in Sapiranga/region."
   },
-  "metrics": [
-    { "number": "+25 Years", "label": "Of Practical Teaching Experience" },
-    { "number": "+500", "label": "Passed Students" },
-    { "number": "98%", "label": "Detran/RS Practical Pass Rate" },
-    { "number": "100%", "label": "Individualized Attention & Teaching" }
-  ],
+  "metrics": {
+    "ariaLabel": "Metrics and Results",
+    "items": [
+      { "number": "+25 Years", "label": "Of Practical Teaching Experience" },
+      { "number": "+6000", "label": "Passed Students" },
+      { "number": "98%", "label": "Detran/RS Practical Pass Rate" },
+      { "number": "100%", "label": "Individualized Attention & Teaching" }
+    ]
+  },
   "services": {
+    "ariaLabel": "Services and Driving Lessons",
     "badge": "Tailored Services",
     "title": "How can I help you gain your independence behind the wheel?",
     "subtitle": "Personalized practical training in Sapiranga/RS and neighboring cities, focused on your safety and rhythm.",
@@ -131,6 +143,7 @@
     }
   },
   "diferenciais": {
+    "ariaLabel": "Method Key Differentials",
     "badge": "Why train with me?",
     "title": "The method that turns insecurity into independence",
     "subtitle": "Say goodbye to fear of making mistakes, impatient instructors, and rigid lessons. Learn to drive for real.",
@@ -168,6 +181,7 @@
     ]
   },
   "simulator": {
+    "ariaLabel": "Personalized Driving Class Simulator",
     "badge": "Quick Booking",
     "title": "Build your customized lesson plan",
     "subtitle": "Select the type of lesson you need and generate your ready-to-send message on WhatsApp with 1 click.",
@@ -202,6 +216,9 @@
     "buttonText": "Send Request Directly via WhatsApp"
   },
   "about": {
+    "ariaLabel": "About Instructor Hélvio",
+    "imageAlt": "Instructor Hélvio - DETRAN-RS Certified Instructor",
+    "instagram": "Instagram",
     "badge": "Meet Your Instructor",
     "title": "Over two decades helping people gain independence on the road",
     "text1": "Hello! I am Instructor Hélvio. I work in training and refining drivers in Sapiranga/RS and throughout the Vale do Sinos region. Over more than 25 years in the profession, I've realized that the main challenge for learners is not mechanical, but rather the pressure and anxiety caused by impatient teaching methods.",
@@ -229,6 +246,9 @@
     "whatsappMessage": "Hello, Instructor Hélvio! I read about your teaching method and would like to chat about practical lessons."
   },
   "testimonials": {
+    "ariaLabel": "Student Testimonials",
+    "prevBtn": "Previous testimonial",
+    "nextBtn": "Next testimonial",
     "badge": "Real Reviews",
     "title": "Stories of people who overcame fear and earned their license",
     "subtitle": "Read reviews from students who faced the same insecurities in Sapiranga and region and now drive freely.",
@@ -241,11 +261,18 @@
       "service2": "Practical Test Reinforcement • Vale do Sinos",
       "review2": "I had failed parallel parking twice on the Detran exam. I took reinforcement lessons with Hélvio and he taught me very simple visual reference points. The mock exam was identical to the real test. Passed first try with zero point deductions!",
       "service3": "1st License from Scratch • Campo Bom / Sapiranga",
-      "review3": "I had never started a car in my life and I get extremely anxious. Hélvio explained every detail without raising his voice or complaining. He conveys unbelievable confidence. Highly recommended for anyone afraid of stressed instructors!"
+      "review3": "I had never started a car in my life and I get extremely anxious. Hélvio explained every detail without raising his voice or complaining. He conveys unbelievable confidence. Highly recommended for anyone afraid of stressed instructors!",
+      "service4": "Licensed Driver Training • Parobé / Taquara",
+      "review4": "I was always afraid of taking the highway, the heavy traffic on RS-239 completely froze me. Hélvio gave me great confidence and taught me defensive driving techniques that changed everything. Commuting from Parobé to Taquara is now super easy.",
+      "service5": "1st License from Scratch • Campo Bom",
+      "review5": "Starting from scratch after age 40 seemed impossible to me. He had golden patience teaching me from the pedals to shifting gears in downtown Campo Bom traffic. His teaching approach makes all the difference for anyone with insecurity.",
+      "service6": "Practical Test Reinforcement • Novo Hamburgo",
+      "review6": "I took the reinforcement package focused on the Novo Hamburgo practical exam route. He showed me all the road 'traps' and corrected my bad driving habits. The result couldn't be other: passed without any deductions! Highly recommended."
     },
     "trainedCountText": "+500 drivers prepared in Sapiranga and region"
   },
   "faq": {
+    "ariaLabel": "Frequently Asked Questions",
     "badge": "Have Questions?",
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know before booking your first practical lesson in Sapiranga and region.",
@@ -277,6 +304,8 @@
     ]
   },
   "cta": {
+    "ariaLabel": "Contact and Scheduling",
+    "instagramAriaLabel": "Instagram of {{name}}",
     "urgencyBadge": "Limited Weekly Slots in Sapiranga and Region",
     "titleMain": "Ready to take the wheel and conquer your",
     "titleHighlight": "freedom",
@@ -290,6 +319,9 @@
     "instagramFollow": "Follow on Instagram:"
   },
   "footer": {
+    "ariaLabel": "Site footer",
+    "logoAlt": "Instructor Hélvio Logo - Driving Lessons",
+    "quickNavAriaLabel": "Footer quick links",
     "brandDescription": "Specialized practical driving instruction for 1st License, Detran/RS exam reinforcement, and overcoming driving anxiety in real-world traffic in Sapiranga and region.",
     "serving": "Serving:",
     "quickNav": "Quick Navigation",

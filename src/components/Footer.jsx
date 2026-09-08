@@ -7,7 +7,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-950 text-slate-400 text-xs py-12 border-t border-navy-900">
+    <footer
+      aria-label={t('footer.ariaLabel')}
+      className="bg-navy-950 text-slate-400 text-xs py-12 border-t border-navy-900"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-navy-900">
           {/* Coluna 1: Sobre & Identidade */}
@@ -15,7 +18,10 @@ export default function Footer() {
             <div className="flex items-center gap-2.5">
               <img
                 src={logoImg}
-                alt={t('contact.instructorName')}
+                alt={t('footer.logoAlt')}
+                width="36"
+                height="36"
+                loading="lazy"
                 className="w-9 h-9 rounded-xl object-cover"
               />
               <span className="font-heading font-extrabold text-lg text-white">
@@ -32,7 +38,7 @@ export default function Footer() {
           </div>
 
           {/* Coluna 2: Links Rápidos */}
-          <div className="space-y-2.5">
+          <nav aria-label={t('footer.quickNavAriaLabel')} className="space-y-2.5">
             <span className="block font-bold text-white text-sm">{t('footer.quickNav')}</span>
             <ul className="space-y-1.5">
               <li>
@@ -66,7 +72,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
 
           {/* Coluna 3: Aviso Legal & Conformidade Detran */}
           <div className="space-y-2.5">
