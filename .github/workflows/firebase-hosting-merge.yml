@@ -1,9 +1,9 @@
-name: Deploy to Firebase Hosting on merge
+name: Deploy to Firebase Hosting on Release Tag
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build_test_and_deploy:
