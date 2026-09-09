@@ -147,9 +147,9 @@ Abaixo está a organização principal dos arquivos do projeto:
 helvio-instrutor/
 ├── .github/
 │   └── workflows/                      # Pipelines do GitHub Actions
-│       ├── firebase-hosting-merge.yml  # Deploy automático no Firebase Hosting
-│       ├── lint.yml                    # Pipeline de verificação de linter em PRs/commits
-│       └── test.yml                    # Pipeline de testes automatizados e validação de build
+│       ├── ci-cd.yml                   # Esteira unificada de testes e Semantic Release
+│       ├── firebase-hosting-merge.yml  # Deploy automático no Firebase Hosting ativado por tags (v*.*.*)
+│       └── lint.yml                    # Pipeline de verificação de linter em PRs/commits
 ├── public/                             # Arquivos estáticos servidos diretamente na raiz
 │   ├── hero.webp                       # Imagem principal da seção Hero
 │   ├── logo.webp                       # Logotipo oficial
@@ -215,9 +215,8 @@ Para alterar contatos, preços, depoimentos, perguntas frequentes ou qualquer te
 
 O repositório possui fluxos de trabalho automatizados com **GitHub Actions**:
 
-- **Lint Check (`lint.yml`)**: Valida o padrão de código no envio de Push e Pull Requests.
-- **Automated Tests (`test.yml`)**: Executa a suíte de testes unitários e valida o build de produção a cada Push/PR para a branch `main`.
-- **Semantic Release & Tagging (`release.yml`)**: Disparado em pushes para a branch `main`, analisa as mensagens de commit no padrão Conventional Commits para calcular automaticamente o versionamento semântico (SemVer), atualizar o `CHANGELOG.md`, criar tags Git (ex: `v1.1.0`) e gerar GitHub Releases.
-- **Firebase Deploy (`firebase-hosting-merge.yml`)**: Disparado **exclusivamente com a criação de novas tags de versão (`v*.*.*`)**, executando a verificação de linter, o build de produção e o deploy no **Firebase Hosting**.
+- **CI/CD Pipeline & Release (`ci-cd.yml`)**: Esteira unificada (Node.js 22) que executa linter, testes automatizados e validação de build a cada Push/PR na branch `main`. Quando acionada por `push` na branch `main`, executa de forma encadeada o `semantic-release` para gerar novas tags e releases.
+- **Firebase Deploy (`firebase-hosting-merge.yml`)**: Workflow acionado **exclusivamente com a criação de novas tags de versão (`v*.*.*`)**, executando a validação final e o deploy no **Firebase Hosting**.
+- **Lint Check (`lint.yml`)**: Valida o padrão de código no envio de Pull Requests e branches auxiliares.
 
 

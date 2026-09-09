@@ -15,20 +15,9 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - **Notificações Sociais (Toast)**: Notificações rotativas de prova social (`Toast.jsx`) configuráveis por constante de tempo.
 - **Otimizações de SEO**: Inclusão de meta tags sociais (Open Graph), `sitemap.xml`, `robots.txt` e estrutura semântica HTML5.
 - **Suíte de Testes Automatizados**: Testes unitários e de integração configurados com Vitest, Happy DOM, `@testing-library/react` e `@testing-library/jest-dom`.
-- **Pipelines de CI/CD (GitHub Actions)**:
-  - Workflow de verificação de linter (`lint.yml`).
-  - Workflow de execução de testes e build (`test.yml`).
-  - Workflow de deploy automatizado no Firebase Hosting.
-- **Padronização de Código e Lint**: Configuração do ESLint 9 com Prettier, plugins do React e remoção de imports não utilizados.
-- **Versionamento Automático (Semantic Release)**: Configuração do `semantic-release` com plugins de changelog, git e GitHub releases via Conventional Commits.
-- **Exibição da Versão no Rodapé**: Exposição da variável global `__APP_VERSION__` via Vite `define` no `vite.config.js` e renderização discreta no `Footer.jsx`.
-- **Workflow de Automação de Releases (`release.yml`)**: Pipeline no GitHub Actions para tagging e releases automáticos em envios para a branch `main`.
-
-### Changed
-- **Migração do ambiente de testes**: Alterado o ambiente de testes do Vitest de `jsdom` para `happy-dom` para melhor desempenho e menor consumo de recursos.
-- **Centralização de Estilos**: Remoção de cores hardcoded no CSS e centralização das paletas de cores (`brand`, `navy`, `accent`) no `tailwind.config.js`.
-- **Estruturação de Dados**: Centralização de textos, perguntas do FAQ, depoimentos e contatos em `src/data/content.js`.
-- **Gatilho de Deploy do Firebase (`firebase-hosting-merge.yml`)**: Alterado para disparar exclusivamente mediante criação de tags de versão (`v*.*.*`).
+- **Esteira Unificada de CI/CD (`ci-cd.yml`)**: Pipeline integrada no GitHub Actions com Node.js 22 que executa linter, testes automatizados, validação de build e aciona o `semantic-release` de forma encadeada (`needs: test`).
+- **Remoção de Workflows Obsoletos**: Exclusão dos arquivos redundantes `test.yml` e `release.yml`.
+- **Gatilho de Deploy do Firebase (`firebase-hosting-merge.yml`)**: Ajustado para utilizar Node.js 22 e disparar exclusivamente mediante publicação de tags de versão (`v*.*.*`).
 
 ### Fixed
 - **Tags de Serviços**: Correção do mapeamento de valores e visualização das tags nos cards de serviços.
