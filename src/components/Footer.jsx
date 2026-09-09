@@ -88,7 +88,12 @@ export default function Footer() {
           <p>
             © {currentYear} {t('footer.rights')} {t('contact.city')}/{CONTACT_INFO.state}.
           </p>
-          <p className="flex items-center gap-1">{t('footer.tagline')}</p>
+          <div className="flex items-center gap-3">
+            <p className="flex items-center gap-1">{t('footer.tagline')}</p>
+            <span className="text-[10px] bg-navy-900 text-slate-400 px-2 py-0.5 rounded border border-navy-800 font-mono">
+              v{typeof __APP_VERSION__ !== 'undefined' ? __APP_VERSION__ : '1.0.0'}
+            </span>
+          </div>
         </div>
       </div>
     </footer>

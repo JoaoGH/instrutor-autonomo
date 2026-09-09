@@ -217,6 +217,7 @@ O repositório possui fluxos de trabalho automatizados com **GitHub Actions**:
 
 - **Lint Check (`lint.yml`)**: Valida o padrão de código no envio de Push e Pull Requests.
 - **Automated Tests (`test.yml`)**: Executa a suíte de testes unitários e valida o build de produção a cada Push/PR para a branch `main`.
-- **Firebase Deploy (`firebase-hosting-merge.yml`)**: Realiza o deploy automático para o **Firebase Hosting** assim que os commits são mesclados na branch `main`.
+- **Semantic Release & Tagging (`release.yml`)**: Disparado em pushes para a branch `main`, analisa as mensagens de commit no padrão Conventional Commits para calcular automaticamente o versionamento semântico (SemVer), atualizar o `CHANGELOG.md`, criar tags Git (ex: `v1.1.0`) e gerar GitHub Releases.
+- **Firebase Deploy (`firebase-hosting-merge.yml`)**: Disparado **exclusivamente com a criação de novas tags de versão (`v*.*.*`)**, executando a verificação de linter, o build de produção e o deploy no **Firebase Hosting**.
 
 

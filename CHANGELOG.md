@@ -18,13 +18,17 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - **Pipelines de CI/CD (GitHub Actions)**:
   - Workflow de verificação de linter (`lint.yml`).
   - Workflow de execução de testes e build (`test.yml`).
-  - Workflow de deploy automatizado no Firebase Hosting ao realizar merge no branch `main` (`firebase-hosting-merge.yml`).
+  - Workflow de deploy automatizado no Firebase Hosting.
 - **Padronização de Código e Lint**: Configuração do ESLint 9 com Prettier, plugins do React e remoção de imports não utilizados.
+- **Versionamento Automático (Semantic Release)**: Configuração do `semantic-release` com plugins de changelog, git e GitHub releases via Conventional Commits.
+- **Exibição da Versão no Rodapé**: Exposição da variável global `__APP_VERSION__` via Vite `define` no `vite.config.js` e renderização discreta no `Footer.jsx`.
+- **Workflow de Automação de Releases (`release.yml`)**: Pipeline no GitHub Actions para tagging e releases automáticos em envios para a branch `main`.
 
 ### Changed
 - **Migração do ambiente de testes**: Alterado o ambiente de testes do Vitest de `jsdom` para `happy-dom` para melhor desempenho e menor consumo de recursos.
 - **Centralização de Estilos**: Remoção de cores hardcoded no CSS e centralização das paletas de cores (`brand`, `navy`, `accent`) no `tailwind.config.js`.
 - **Estruturação de Dados**: Centralização de textos, perguntas do FAQ, depoimentos e contatos em `src/data/content.js`.
+- **Gatilho de Deploy do Firebase (`firebase-hosting-merge.yml`)**: Alterado para disparar exclusivamente mediante criação de tags de versão (`v*.*.*`).
 
 ### Fixed
 - **Tags de Serviços**: Correção do mapeamento de valores e visualização das tags nos cards de serviços.

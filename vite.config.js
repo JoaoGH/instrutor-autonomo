@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { version } from './package.json';
 import { SITE_CONFIG, CONTACT_INFO } from './src/data/content.js';
 
 function htmlInjectPlugin() {
@@ -35,6 +36,9 @@ function htmlInjectPlugin() {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), htmlInjectPlugin()],
+  define: {
+    __APP_VERSION__: JSON.stringify(version),
+  },
   test: {
     globals: true,
     environment: 'happy-dom',
